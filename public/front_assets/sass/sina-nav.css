@@ -1,0 +1,210 @@
+/**
+ * Template name: Sina-nav Multi Purpose Menu
+ * Template URI: https://github.com/shaonsina/sina-nav-4
+ * Version: 2.1
+ * Author: shaonsina
+ */
+
+
+.sina-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.sina-nav {
+    width: 100%;
+    float: left;
+    display: block;
+}
+
+.sina-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.sina-nav ul ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+.sina-nav ul li a {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+}
+
+.sina-nav .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.sina-nav .sina-menu li .fa-icon-left {
+    margin-right: 8px;
+}
+
+.sina-nav .sina-menu li .fa-icon-right {
+    margin-left: 8px;
+}
+
+.sina-nav .sina-menu > li > a {
+	padding: 9px 23px;
+	color: #4A4A4A;
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0 7px;
+	float: left;
+}
+
+.sina-nav .sina-menu > li.sina-nav-cta-btn {
+    margin-left: 20px;
+}
+
+.sina-nav .sina-menu > li.sina-nav-cta-btn a {
+	border: 1px solid #282936;
+	border-radius: 4px;
+	text-align: center;
+	color: #fff;
+	background-color: #282936;
+	font-size: 14px;
+	letter-spacing: .5px;
+}
+
+.sina-nav-cta-btn a::before {
+    display: none !important;
+}
+
+.sina-nav-cta-btn a:hover {
+	color: #fff !important;
+	background-color: #ffd04d !important;
+	-webkit-box-shadow: 0 2px 20px 2px rgba(255, 72, 0, .68);
+	box-shadow: 0 2px 20px 2px #ffd04d;
+	transition: all .5s;
+	border-color: #ffd04d !important;
+}
+.link-effect-14 .sina-nav-cta-btn  a:hover::after {
+	opacity: 0;
+}
+
+.sina-nav .sina-menu .mega-menu-col-title:before,
+.sina-nav .sina-menu .dropdown .dropdown-toggle:before,
+.sina-nav .sina-menu .dropdown .dropdown-toggle:after {
+    font-family: 'FontAwesome';
+}
+
+
+.sina-nav .menu-item-has-mega-menu.dropdown {
+    position: static;
+}
+
+.sina-nav .extension-nav {
+    display: none;
+    float: right;
+    margin-left: 20px;
+}
+
+.sina-nav .extension-nav > ul {
+    float: left;
+}
+
+.sina-nav .extension-nav > ul > li {
+    float: left;
+}
+
+.sina-nav .extension-nav > ul > li > a {
+    display: block;
+    padding: 20px 12px;
+    position: relative;
+    font-size: 18px;
+    color: #222;
+}
+
+.sina-nav.navbar-fixed.navbar-freez.wp-topbar,
+.sina-nav.mobile-sidebar.wp-topbar .navbar-collapse,
+.sina-nav.wp-topbar .widget-bar {
+    top: 32px;
+}
+
+.sina-nav .widget-bar {
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    padding: 20px;
+    height: 100%;
+    z-index: 99999;
+    transition: all 0.6s ease;
+    background-color: #333;
+}
+
+.sina-nav .widget-bar.on {
+    right: 0;
+}
+
+.sina-nav .widget-bar .widget {
+    margin-bottom: 30px;
+}
+
+.sina-nav .widget-bar .widget .link li a {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.sina-nav .widget-bar .widget .link li a:focus,
+.sina-nav .widget-bar .widget .link li a:hover {
+    color: #fcfcfc;
+}
+
+.sina-nav .widget-bar .widget .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-weight: 700;
+}
+
+.sina-nav .widget-bar .close-widget-bar {
+    float: right;
+    font-size: 16px;
+    color: #ccc;
+}
+
+@media (max-width: 1025px) {
+    .sina-nav .navbar-collapse.collapse {
+        display: block;
+    }
+
+    .sina-nav .sina-menu > li {
+        float: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .sina-nav .extension-nav {
+        display: block;
+    }
+}
+
+
+@media (max-width: 1920px) {
+    .sina-nav .navbar-collapse.collapse {
+        display: block;
+        width: 100%;
+        display: block;
+        float: right;
+    }
+
+    .sina-nav .sina-menu > li {
+        float: left;
+    }
+}

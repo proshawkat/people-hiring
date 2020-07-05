@@ -1,0 +1,203 @@
+@media only screen and (min-width: 1920px){
+	
+	.counter-section .inner-section{
+		margin-left:-300px;
+	}
+	
+}
+
+@media only screen and (max-width: 6000px){
+	
+	.page-wrapper{
+		overflow:hidden;	
+	}
+	
+}
+
+@media only screen and (max-width: 1300px){
+	
+	.page-wrapper{
+		overflow:hidden;	
+	}
+	
+}
+
+@media only screen and (max-width: 1140px){
+			
+	.fact-counter .column .counter-title{
+		font-size:15px;
+	}
+	
+	.page-title{
+		padding:120px 0px;
+	}
+		
+	.counter-section .inner-section{
+		margin-left:0px;
+		padding-left:0px;
+	}
+	
+}
+
+@media only screen and (max-width: 1023px){
+
+	.page-title h2{
+		font-size:35px;
+	}
+		
+	.sec-title h2{
+		font-size:30px;
+	}
+		
+}
+
+@media only screen and (max-width: 767px){
+	
+	.projects-masonry .gallery-item.large-column,
+	.projects-masonry .gallery-item.small-column{
+		width:50%;
+	}
+		
+	.page-title h1,
+	.sec-title h2{
+		font-size:32px;
+	}
+		
+	.fact-counter .column .inner{
+		padding-left:0px;
+		text-align:center;
+	}
+	
+	.fact-counter .column .inner .icon-box{
+		position:relative;
+		top:0px;
+		margin-bottom:20px;
+	}
+	
+	.testimonial-block .inner-block{
+		padding-left:0px;
+	}
+	
+	.testimonial-block .inner-block .content{
+		padding-left:0px;
+		border:none;
+	}
+	
+	
+	.testimonial-section .owl-dots{
+		margin-left:0px;
+	}
+	
+	.management-section .management-info-tabs .management-tabs .tab-btns .tab-btn{
+		width:49%;
+		border-right:none;
+	}
+	
+	.sec-title h2,
+	.contact-section .info-column h2,
+	.related-projects .title-box h2,
+	.average-section .title-column h2,
+	.contact-info-section .info-column h2{
+		font-size:30px;
+	}
+	
+	.service-block .inner-box{
+		padding-left:15px;
+		padding-right:15px;
+	}
+	
+	.projects-section-two .big-letter{
+		font-size:200px;
+	}
+	
+	.projects-section-two .filters li{
+		margin-right:20px;
+	}
+	
+	.sec-title h2 br,
+	.blog-single .inner-box .lower-content h3 br,
+	.news-single-block-text .block-inner-block .block-lower-content h3 br,
+	.news-block-four .inner-box .lower-content h3 a br{
+		display:none;
+	}
+	
+	.projects-section-two.projects-fullwidth .gallery-item{
+		width:50%;
+	}
+	
+	.related-projects{
+		padding-top:100px;
+	}
+	
+	.author-box .author-inner .content .image{
+		position:relative;
+	}
+	
+	.author-box .author-inner .content .text{
+		padding-left:0px;
+		border:none;
+	}
+	
+	.author-box .author-inner .content .image .author-name{
+		text-align:left;
+		margin-bottom:20px;
+	}
+	
+	.author-box .author-inner{
+		padding:30px 30px;
+	}
+	
+	.author-box .author-inner .content .author{
+		top:0px;
+		border:none;
+		padding-left:0px;
+	}
+	
+	
+}
+
+@media only screen and (max-width: 599px){
+	
+	.average-section .content-column .average-info li{
+		display:block;
+		width:100%;
+		margin-bottom:20px;
+		padding-left:0px;
+		border:none;
+	}
+
+	.contact-info-section .info-column,
+	.map-info-section .outer-container .left-column .content{
+		padding-right:15px;
+	}
+
+	.accordion-box .block .acc-btn{
+		font-size:18px;
+	}
+	
+	.sec-title h2{
+		font-size:22px;
+	}
+		
+	.price-block .inner-box{
+		padding:30px 15px;
+	}
+	
+	.price-block .inner-box .upper-box .pull-right{
+		width:100%;
+	}
+	
+	.average-section .title-column h2{
+		font-size:24px;
+	}
+	
+	.author-box .author-inner .content .text,
+	.average-section .content-column .text{
+		font-size:16px;
+	}
+	
+	.price-block .inner-box .upper-box .theme-btn{
+		margin-top:15px;
+	}
+		
+}
