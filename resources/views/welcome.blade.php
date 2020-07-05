@@ -7,13 +7,15 @@
         <div class="row">
             <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7">
                 <div class="banner_cntn">
-                    <h1 class="description"> <span class="selective">Unlimited</span> graphic designs <br>
+                    <h1 class="description"> 
+                        <span class="selective">Unlimited</span> graphic designs <br>
+                        & web development <br>
                        <span class="selective selective2">Flat</span> Monthly Fee. </h1>
                     <h5>No pain of selecting, instructing or managing them. <br> No equipment, software, office space or overhead costs. Just having a team of experts at your fingertips</h5>
                     <a class="banner_btn" href="{{ url('price') }}">See pricing</a>
                     <div class="client_text">
                          
-                        <p>Best business decisions I've made! The quality of the work is exceptional and the monthly investment just can't be beat. Designoble helped us significantly improve our brand awareness in our community.
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </p>
                         <p><b>Henry Warner, CEO, Howler</b></p>
                     </div>
@@ -129,8 +131,8 @@
                                 <img src="{{ asset('front_assets/images/body/capabilities_01.png') }}" class="img-fluid" alt="Capabilities Images">
                             </figure>
                             <div class="capabilities_cntn">
-                                <h4>Print Design (DTP)</h4>
-                                <p>....</p> 
+                                <h4>Web Development</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> 
                             </div> 
                         </a> 
                     </div> 
@@ -143,7 +145,7 @@
                             </figure>
                             <div class="capabilities_cntn">
                                 <h4>UI/UX Design</h4>
-                                <p>....</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             </div>
                         </a>
                     </div>
@@ -156,7 +158,7 @@
                             </figure>
                             <div class="capabilities_cntn">
                                 <h4>3D & Motion</h4>
-                                <p>....</p>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             </div>
                         </a> 
                     </div>
@@ -172,90 +174,6 @@
                     <div class="capabilities_footer_cntn">
                         <a href="{{ url('how_we_work') }}">Check our how we work</a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- DESIGN SUPPORT -->
-<section class="design_support_area">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <div class="design_support_cntn">
-                    <h3>Relieve Stress + Feel Happier. Scale Your Business with Professional Design Help</h3>
-                    <div class="design_box_accordion">
-                        <div class="accordion js-accordion">
-                            <div class="accordion__item js-accordion-item active">
-                                <div class="accordion-header js-accordion-header">
-                                    <img src="{{ asset('front_assets/images/body/icon.png') }}" class="img-fluid" alt="icon">
-                                    A win-win solutions
-                                </div>
-                                <div class="accordion-body js-accordion-body">
-                                    <div class="accordion-body__contents">We hire, train and manage great talent. <br> We provide expert developers and designers and <br> help clear a path to build a great product.
-                                    </div>
-                                </div> <!-- end of accordion body -->
-                            </div>
-                            <div class="accordion__item js-accordion-item">
-                                <div class="accordion-header js-accordion-header">
-                                    <img src="{{ asset('front_assets/images/body/icon_01.png') }}" class="img-fluid" alt="icon">Painless Communication</div>
-                                <div class="accordion-body js-accordion-body">
-                                    <div class="accordion-body__contents">Designoble are well-versed in a variety of project management and collaboration tools. We have a <br> dedicated team ready to assist you 24/7 via live chat.
-                                    </div>
-                                </div> <!-- end of accordion body -->
-                            </div>
-                            <div class="accordion__item js-accordion-item">
-                                <div class="accordion-header js-accordion-header">
-                                    <img src="{{ asset('front_assets/images/body/icon_02.png') }}" class="img-fluid" alt="icon">
-                                    Quick Scaling
-                                </div>
-                                <div class="accordion-body js-accordion-body">
-                                    <div class="accordion-body__contents">
-                                        Whatever your needs. Long or short term, we have a solution that works for you. Pay as you grow and customize the platform to fit your changing needs. 
-                                    </div>
-                                </div> <!-- end of accordion body -->
-                            </div>
-                            <div class="accordion__item js-accordion-item">
-                                <div class="accordion-header js-accordion-header">
-                                    <img src="{{ asset('front_assets/images/body/icon_03.png') }}" class="img-fluid" alt="icon">
-                                    Cost Efficiency 
-                                </div>
-                                <div class="accordion-body js-accordion-body">
-                                    <div class="accordion-body__contents">
-                                        Lock down your marketing budget. Pay the same price every month, no matter how many requests you send to you dedicated Designoble team.
-                                    </div>
-                                </div> <!-- end of accordion body -->
-                            </div>
-                            <div class="accordion__item js-accordion-item">
-                                <div class="accordion-header js-accordion-header">
-                                    <img src="{{ asset('front_assets/images/body/icon_04.png') }}" class="img-fluid" alt="icon">
-                                    Systems
-                                </div>
-                                <div class="accordion-body js-accordion-body">
-                                    <div class="accordion-body__contents">
-                                        Integrate your designer into your workflow — no coding experience necessary. Our own build project management systems makes it easy to manage projects and team easily.
-                                    </div>
-                                </div> <!-- end of accordion body -->
-                            </div>
-                            <div class="accordion__item js-accordion-item">
-                                <div class="accordion-header js-accordion-header">
-                                    <img src="{{ asset('front_assets/images/body/icon_05.png') }}" class="img-fluid" alt="icon">
-                                    Security
-                                </div>
-                                <div class="accordion-body js-accordion-body">
-                                    <div class="accordion-body__contents">
-                                        Your graphic design files are securely stored in our cloud-based app, accessible to you and your team at any time. Rest easy knowing that your files are safe and secure.
-                                    </div>
-                                </div> <!-- end of accordion body -->
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <div class="design_support_cntn">
-                    <img src="{{ asset('front_assets/images/body/design_support.png') }}" class="img-fluid" alt="skill people logo">
                 </div>
             </div>
         </div>
@@ -299,7 +217,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div class="design_limite_cntn">
-                    <h3>Break Your <br> Graphic Designing Limits</h3>
+                    <h3>Break Your Limits</h3>
                     <div class="design_limite_box_cntn">
                         <h4>Our Unique Way of Doing Things</h4>
                         <p>Whenever you need, it’s easy to hire and manage project with a few clicks. There’s no recruiting, HR, onboarding, or admin. Our software makes it easy to collaborate with your team and share design files.
@@ -307,7 +225,12 @@
                     </div>
                     <div class="design_limite_box_cntn">
                         <h4>Skilled designers recruited exclusively for you</h4>
-                        <p>We carefully check everybody before allowing them onto our platform to guarantee you'll be working with an expert in their field of work. We have a deep and immediate talent pool ready to get to know you, your business, and your growth goals.  Let’s grow together.
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="design_limite_box_cntn">
+                        <h4>Web development exclusively for you</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </p>
                     </div>
                     <div class="design_limite_box_cntn">
@@ -334,30 +257,4 @@
         </div>
     </div>
 </section>
-
-<section class="design_support_area recruitment_process_margin">
-    <div class="container">
-        <div class="recruitment_process_bg">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-                    <div class="design_support_cntn">
-                        <h3>Single project Request. Pay as you go</h3>
-                        <p class="defult_txt">We guarantee a dedicated designer and consistent quality for every request you put in. All our designers are <br> in-house, we don’t outsource your work to a third party.</p>
-                        <div class="recruitment">
-                            <a href="#">
-                                <button class="learn-more">
-                                    <div class="circle">
-                                        <span class="icon arrow"></span>
-                                    </div>
-                                    <p class="button_text">Get Started!</p>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
 @endsection

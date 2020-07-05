@@ -9,7 +9,7 @@
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="bussines_plan_hader_cntn">
                         <h3>Plans made for your business</h3>
-                        <p>We guarantee dedicated designers and consistent <br> quality for every request you put in.</p>
+                        <p>Lorem Ipsum is simply dummy text of <br> the printing and typesetting industry.</p>
                     </div>
                 </div>
             </div>
@@ -40,14 +40,6 @@
                                 </div>
                                 <div class="bussines_plan_btn">
                                     <a class="p_banner_btn checkoutModal" data-toggle="modal" data-price="{{ $servcie->price }}" data-id="{{ $servcie->id }}" data-stitle="{{ $servcie->title }}" href="#checkoutModal">Get Started!</a>
-                                    <a href="{{ url('price/single_price/standard') }}">
-                                    <button class="learn-more bussin_p_btn">
-                                        <div class="circle">
-                                            <span class="icon arrow"></span>
-                                        </div>
-                                        <p class="button_text">Learn more</p>
-                                    </button>
-                                    </a>
                                 </div>
                                 <img class="p_banner_lft" src="{{ asset('front_assets/images/inner_images/p_details_01.png') }}">
                             </div>
@@ -56,7 +48,7 @@
 
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="bussines_plan_footer_text">
-                            <p>Need 5+ Designer? Or looking for Annual contract?</p>
+                            <p>Need 5+ Designer Or Web Developer? Or looking for Annual contract?</p>
                             <h5>Please contact or chat for</h5>
                             <p><span>special discount and features.</span> </p>
                         </div>
