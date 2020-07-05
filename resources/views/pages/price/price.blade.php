@@ -15,81 +15,45 @@
             </div>
             <div class="bussines_plan_container">
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <div class="bussines_plan_cntn">
-                            <h4>Standard Plan</h4>
-                            <div class="bussines_plan_rate">
-                                <p>$</p>
-                                <h1>529</h1>
-                                <p class="bussines_plan_month_text">/month</p>
+                    @foreach($services as $servcie)
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <div class="bussines_plan_cntn">
+                                <h4>{{ $servcie->title }}</h4>
+                                <div class="bussines_plan_rate">
+                                    <p>$</p>
+                                    <h1>{{ $servcie->price }}</h1>
+                                    <p class="bussines_plan_month_text">/month</p>
+                                </div>
+                                <div class="bussines_plan_text">
+                                    <p>- 1 dedicated Mid-Level designer</p>
+                                    <p>- 8 Hours Day 5 Days week</p>
+                                    <p>- No project Limitation</p>
+                                    <p>- Unlimited revisions</p>
+                                    <p>- Free stock photos</p>
+                                    <p>- Native source files included</p>
+                                    <p>- no extra fees</p>
+                                    <p>- Dedicated project Manager</p>
+                                    <p>- No hourly bills </p>
+                                    <p>- Emergency support (in off day)</p>
+                                    <p>- Unlimited File storage</p>
+                                    <p>-Integrated Project Management tools</p>
+                                </div>
+                                <div class="bussines_plan_btn">
+                                    <a class="p_banner_btn checkoutModal" data-toggle="modal" data-price="{{ $servcie->price }}" data-id="{{ $servcie->id }}" data-stitle="{{ $servcie->title }}" href="#checkoutModal">Get Started!</a>
+                                    <a href="{{ url('price/single_price/standard') }}">
+                                    <button class="learn-more bussin_p_btn">
+                                        <div class="circle">
+                                            <span class="icon arrow"></span>
+                                        </div>
+                                        <p class="button_text">Learn more</p>
+                                    </button>
+                                    </a>
+                                </div>
+                                <img class="p_banner_lft" src="{{ asset('front_assets/images/inner_images/p_details_01.png') }}">
                             </div>
-                            <div class="bussines_plan_text">
-                                <p>- 1 dedicated Mid-Level designer</p>
-                                <p>- 8 Hours Day 5 Days week</p>
-                                <p>- No project Limitation</p>
-                                <p>- Unlimited revisions</p>
-                                <p>- Free stock photos</p>
-                                <p>- Native source files included</p>
-                                <p>- no extra fees</p>
-                                <p>- Dedicated project Manager</p>
-                                <p>- No hourly bills </p>
-                                <p>- Emergency support (in off day)</p>
-                                <p>- Unlimited File storage</p>
-                                <p>-Integrated Project Management tools</p>
-                            </div>
-                            <div class="bussines_plan_btn">
-                                <a class="p_banner_btn checkoutModal" data-toggle="modal" data-price="529" data-id="1" data-stitle="Standard Plan" href="#checkoutModal">Get Started!</a>
-                                <a href="{{ url('price/single_price/standard') }}">
-                                <button class="learn-more bussin_p_btn">
-                                    <div class="circle">
-                                        <span class="icon arrow"></span>
-                                    </div>
-                                    <p class="button_text">Learn more</p>
-                                </button>
-                                </a>
-                            </div>
-                            <img class="p_banner_lft" src="{{ asset('front_assets/images/inner_images/p_details_01.png') }}">
                         </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <div class="bussines_plan_cntn">
-                            <h4>Pro Plan</h4>
-                            <div class="bussines_plan_rate">
-                                <p>$</p>
-                                <h1>1200</h1>
-                                <p class="bussines_plan_month_text">/month</p>
-                            </div>
-                            <div class="bussines_plan_text">
-                                <p>- 1 dedicated Pro-Level designer</p>
-                                <p>- 8 Hours Day, 5 Days week</p>
-                                <p>- No project Limitation</p>
-                                <p>- Express work delivery</p>
-                                <p>- Free stock photos</p>
-                                <p>- Native source files included</p>
-                                <p>- Dedicated project Manager</p>
-                                <p>- No hourly bills </p>
-                                <p>- Emergency support (in off day)</p>
-                                <p>- Unlimited File storage</p>
-                                <p>- Integrated Project Management tools</p>
-                                <p>- No extra fees</p>
-                            </div>
-                            <div class="bussines_plan_btn">
-                                <a class="p_banner_btn checkoutModal" data-toggle="modal" data-price="1200" data-id="2" data-stitle="Pro Plan" href="#checkoutModal">Get Started!</a>
-                                <a href="{{ url('price/single_price/pro') }}">
-                                <button class="learn-more bussin_p_btn">
-                                    <div class="circle">
-                                        <span class="icon arrow"></span>
-                                    </div>
-                                    <p class="button_text">Learn more</p>
-                                </button>
-                                </a>
-                            </div>
-                            
-                            
-                            
-                            <img class="p_banner_right" src="{{ asset('front_assets/images/inner_images/p_details_02.png') }}">
-                        </div>
-                    </div>
+                    @endforeach
+
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="bussines_plan_footer_text">
                             <p>Need 5+ Designer? Or looking for Annual contract?</p>

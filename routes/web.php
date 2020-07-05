@@ -21,6 +21,7 @@ Route::post('contact/save','ContactController@insert');
 Route::get('price','PriceController@index');
 Route::get('terms_condition','PriceController@terms_condition');
 Route::get('price/single_price/{id}','PriceController@single_price');
+Route::get('price/service-wise-price/{id}','PriceController@serviceWisePrice');
 Route::get('get_started','PriceController@get_started');
 Route::post('payment/action','PaymentController@action');
 Route::get('process/details','ProcessController@details');

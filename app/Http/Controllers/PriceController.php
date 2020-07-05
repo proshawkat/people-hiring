@@ -27,8 +27,14 @@ class PriceController extends Controller
     	return view('pages.price.single_price_page', compact('service'));
     }
 
+    public function serviceWisePrice($id){
+        $service = OurServices::find($id);
+       return response()->json($service);
+    }
+
     public function get_started(){
-        return view('pages.price.get_started');
+        $services = OurServices::get();
+        return view('pages.price.get_started', compact('services'));
     }
 
     public function terms_condition(){

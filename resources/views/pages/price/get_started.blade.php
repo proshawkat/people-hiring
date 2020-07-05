@@ -12,8 +12,9 @@
                         <div class="get_start_dropdown_box">
                             <select class="form_select" id="select-color" name="carlist" onchange="getval(this);">
                                 <option class="select_text" value="">Select Your Plan</option>
-                                <option class="select_text" value="standard">Standard Plan</option>
-                                <option class="select_text" value="pro">Pro Plan</option>
+                                @foreach($services as $servcie)
+                                    <option class="select_text" value="{{ $servcie->id }}">{{ $servcie->title }}</option>
+                                @endforeach
                             </select>
                             <button class="banner_btn get_start_btn" id="checkoutModal_button">Get Started!</button>
                         </div>
@@ -199,30 +200,47 @@
 
     <script type="text/javascript">
         function getval(sel){
-            if(sel.value=='pro'){
-                var id = 2;
-                var price = 1200;
-                var stitle = 'Pro Plan';
-                $('#ser_id').val(id);
-                $('#ser_price').val(price);
-                $('.checkout_price').text('[Total Amount $'+price+']');
-                $('#ser_title').val(stitle); 
-            }else if(sel.value=='standard'){
-                var id = 1;
-                var price = 529;
-                var stitle = 'Standard Plan';
-                $('#ser_id').val(id);
-                $('#ser_price').val(price);
-                $('.checkout_price').text('[Total Amount $'+price+']');
-                $('#ser_title').val(stitle); 
-            }
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                type:'get',
+                url:'price/service-wise-price/'+sel.value,
+                data:{_token: "{{ csrf_token() }}"
+                },
+                success: function( msg ) {
+                    $('#ser_id').val(msg.id);
+                    $('#ser_price').val(msg.price);
+                    $('.checkout_price').text('[Total Amount $'+msg.price+']');
+                    $('#ser_title').val(msg.title);
+                }
+            });
+            // if(sel.value=='pro'){
+            //     var id = 2;
+            //     var price = 1200;
+            //     var stitle = 'Pro Plan';
+            //     $('#ser_id').val(id);
+            //     $('#ser_price').val(price);
+            //     $('.checkout_price').text('[Total Amount $'+price+']');
+            //     $('#ser_title').val(stitle); 
+            // }else if(sel.value=='standard'){
+            //     var id = 1;
+            //     var price = 529;
+            //     var stitle = 'Standard Plan';
+            //     $('#ser_id').val(id);
+            //     $('#ser_price').val(price);
+            //     $('.checkout_price').text('[Total Amount $'+price+']');
+            //     $('#ser_title').val(stitle); 
+            // }
         }
 
         $('#checkoutModal_button').on( "click", function() {
             var select_val = $('#select-color').val();
-            if(select_val == 'pro' || select_val == 'standard'){
+            // if(select_val == 'pro' || select_val == 'standard'){
                 $("#checkoutModal").modal('show');
-            }
+            // }
         });
 
         $('#terms_check').click(function() {
