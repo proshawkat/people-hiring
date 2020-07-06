@@ -4,18 +4,18 @@
 <head>
     <meta charset="utf-8">
     <title>People Hire - Unlimited Graphic Design | Flat Monthly Fee | Dedicated Design Team</title>
-    <meta name="description" content="Get unlimited graphic design for a flat monthly fee from PeopleHire. Dedicated design team can help you scale your business"/>
-    <link rel="canonical" href="https://www.peoplehire.com/" />
+    <meta name="description" content=""/>
+    <link rel="canonical" href="https://www.peoplehiring.com/" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
 
-    <meta property="og:title" content="People - Unlimited Graphic Design Service|Flat Monthly Fee | Dedicated Design Team" />
-    <meta property="og:description" content="Get unlimited graphic design for a flat monthly fee from People Hire. Dedicated design team can help you scale your business" />
-    <meta property="og:url" content="https://peoplehire.com/" />
+    <meta property="og:title" content="People" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://peoplehiring.com/" />
     <meta property="og:site_name" content="People" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="Get unlimited graphic design for a flat monthly fee from People Hire. Dedicated design team can help you scale your business" />
-    <meta name="twitter:title" content="Kimp - Unlimited Graphic Design Service | Dedicated Design Team" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:title" content="" />
     <meta name="twitter:image" content="___________" />
 
 

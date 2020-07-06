@@ -7,8 +7,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="our_work_cntn">
                     <h3>We Help Purpose-Driven <br> Entrepreneurs to Change the World</h3>
-                    <p>We are on a mission to support sustainable brands by giving them access to the skills they need to grow.
-                        <br> We don’t see ourselves as a design company but as a group of passionate problem solvers who help you design your life around the work that matters to you.</p>
+                    <p>We are on a mission to support sustainable brands by giving them access to the skills they need to grow.</p>
                     <a class="banner_btn work_banner" href="{{ url('price') }}">See Pricing</a>
                 </div>
             </div>
@@ -28,7 +27,7 @@
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="design_support_cntn">
                         <h3>Tired of unreliable freelancers or expensive agencies? Plug our experts in your team!</h3>
-                        <p class="defult_txt">Peopele Hiring is the largest graphic design platform that provides unlimited, high-quality design work for thousands of businesses for a flat rate. People Hiring has been helping businesses of all sorts, from start up to fortune 500 enterprises, grow their businesses by expanding their services, growing their web presence, and iconizing their brand. From finding a designer, to communicating your needs and revisions, to payments, the whole process can be frustrating. We recognized that and created a safe, fast and quality experience to submit your creative design tasks and communicate with your designer effortlessly.</p>
+                        <p class="defult_txt">Peopele Hiring is the largest graphic design and web development platform that provides unlimited, high-quality design work for thousands of businesses for a flat rate. People Hiring has been helping businesses of all sorts, from start up to fortune 500 enterprises, grow their businesses by expanding their services, growing their web presence, and iconizing their brand. From finding a designer, to communicating your needs and revisions, to payments, the whole process can be frustrating.</p>
                         <div class="design_limite_box_cntn">
                             <a href="{{ url('price') }}">
                                 <button class="learn-more learn_more_about">

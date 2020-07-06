@@ -30,7 +30,9 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="design_limite_cntn">
-                        <h3>Unlimited Graphic Design. <br> One Flat Monthly Fee.</h3>
+                        <h3>Unlimited Graphic Design. <br>
+                            Unlimited Web Development.
+                        <br> One Flat Monthly Fee.</h3>
                         <div class="design_limite_box_cntn">
                             <p>
                                 No recruitment hassles. We have a deep and immediatec <br> talent pool ready to get to know you, your business, and <br> your growth goals. Let’s grow together. <br>

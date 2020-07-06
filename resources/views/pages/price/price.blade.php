@@ -25,7 +25,7 @@
                                     <p class="bussines_plan_month_text">/month</p>
                                 </div>
                                 <div class="bussines_plan_text">
-                                    <p>- 1 dedicated Mid-Level designer</p>
+                                    <p>- 1 dedicated Mid-Level designer/developer</p>
                                     <p>- 8 Hours Day 5 Days week</p>
                                     <p>- No project Limitation</p>
                                     <p>- Unlimited revisions</p>

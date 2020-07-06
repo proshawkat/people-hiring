@@ -243,7 +243,7 @@
                             <div class="circle">
                                 <span class="icon arrow"></span>
                             </div>
-                            <a href="{{ url('designlimit') }}" class="button_text">Learn more</a>
+                            <a href="#" class="button_text">Learn more</a>
                         </button>
                     </div>
                 </div>

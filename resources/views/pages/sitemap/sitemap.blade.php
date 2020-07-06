@@ -25,7 +25,6 @@
                     <a href="{{ asset('service') }}">Our work</a>
                     <a href="#">Testimonial</a>
                     <a href="#">Feature</a>
-                    <a href="https://designoble.services/">Single project request</a>
                 </div>
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">

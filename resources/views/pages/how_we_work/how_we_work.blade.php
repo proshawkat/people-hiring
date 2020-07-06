@@ -40,7 +40,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div class="design_limite_cntn">
-                    <h3>Break Your <br> Graphic Designing Limits</h3>
+                    <h3>Break Your Limits</h3>
                     <div class="design_limite_box_cntn">
                         <h4>Our Unique Way of Doing Things</h4>
                         <p>Whenever you need, it’s easy to hire and manage project with a few clicks. There’s no recruiting, HR, onboarding, or admin. Our software makes it easy to collaborate with your team and share design files.
@@ -48,7 +48,12 @@
                     </div>
                     <div class="design_limite_box_cntn">
                         <h4>Skilled designers recruited exclusively for you</h4>
-                        <p>We carefully check everybody before allowing them onto our platform to guarantee you'll be working with an expert in their field of work. We have a deep and immediate talent pool ready to get to know you, your business, and your growth goals.  Let’s grow together.
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
+                    </div>
+                    <div class="design_limite_box_cntn">
+                        <h4>Web development exclusively for you</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </p>
                     </div>
                     <div class="design_limite_box_cntn">
@@ -61,7 +66,7 @@
                             <div class="circle">
                                 <span class="icon arrow"></span>
                             </div>
-                            <p class="button_text">Learn more</p>
+                            <a href="#" class="button_text">Learn more</a>
                         </button>
                     </div>
                 </div>
