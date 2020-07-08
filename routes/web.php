@@ -41,6 +41,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('admin/service/delete/{id}','OurServicesController@delete');
 	Route::post('admin/service/update','OurServicesController@update');
 	Route::get('admin/contact','AdminController@contact')->name('admin.contact');
+	Route::get('admin/subscriber','SubscriberController@index')->name('admin.subscriber');
 	Route::get('admin/gallery','GalleryController@index')->name('admin.gallery');
 	Route::get('admin/gallery/create','GalleryController@create');
 	Route::post('admin/gallery/insert','GalleryController@insert');

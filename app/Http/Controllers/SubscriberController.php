@@ -9,6 +9,11 @@ use Micovi\LaravelSendy\LaravelSendy;
 class SubscriberController extends Controller
 {
 
+    public function index(){
+        $subscriber = Subscriber::orderBy('id', 'desc')->paginate(15);
+        return view('admin.pages.subscriber.subscriber', compact('subscriber'));
+    }
+
     public function store(Request $request){
 
         $subscri = Subscriber::get();

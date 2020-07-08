@@ -65,17 +65,23 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="{{ route('admin.contact') }}">
-                  <i class="material-icons">&#xE8D1;</i>
-                  <span>Contact</span>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link " href="{{ route('admin.gallery') }}">
                   <i class="material-icons">&#xE8D1;</i>
                   <span>Gallery</span>
                 </a>
               </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ route('admin.contact') }}">
+                        <i class="material-icons">&#xE8D1;</i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{{ route('admin.subscriber') }}">
+                        <i class="material-icons">&#xE8D1;</i>
+                        <span>Subscribers</span>
+                    </a>
+                </li>
             </ul>
           </div>
         </aside>
