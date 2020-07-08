@@ -13,18 +13,17 @@ use Micovi\LaravelSendy\LaravelSendy;
 class PaymentController extends Controller
 {
     public function action(Request $request){
-        $sendy = new LaravelSendy();
         if ($request->isMethod('post')){
             if($request->terms_check == 'on'){
-              
+
                 Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
                 Stripe\Charge::create ([
                     "amount" => $request->ser_price * 100,
                     "currency" => "usd",
                     "source" => $request->stripeToken,
-                    "description" => "Service payment from peoplehire.com." 
+                    "description" => "Service payment from peoplehire.com."
                 ]);
-      
+
                 $order = new Order();
                 $order->ser_id = $request->ser_id;
                 $order->first_name = $request->first_name;
@@ -50,14 +49,13 @@ class PaymentController extends Controller
                     $message->subject('Invoice');
                     $message->attachData($pdf->output(), "invoice.pdf");
                 });
-                $subscribe = $sendy->subscribe($request->email);
                 return view('pages.thankyou.thankyou');
-            
+
             }else{
-                return redirect()->back()->with('success', ['Unauthorized access ']); 
+                return redirect()->back()->with('success', ['Unauthorized access ']);
             }
         }else{
-            return redirect()->back()->with('success', ['Unauthorized access ']); 
+            return redirect()->back()->with('success', ['Unauthorized access ']);
         }
     }
 }

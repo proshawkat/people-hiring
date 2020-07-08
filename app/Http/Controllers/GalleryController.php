@@ -24,15 +24,15 @@ class GalleryController extends Controller
         $images = $request->image;
 
         $extension = $images->getClientOriginalExtension();
-        $dir = '/home/designoble/public_html/uploads/gallery/';
+        $dir = 'E:/phpserver/htdocs/people-hiring/public/uploads/gallery/';
         $filename = uniqid() . '_' . time() . '.' . $extension;
         $images->move($dir, $filename);
         Gallery::create([
             'image' => $filename
         ]);
 
-        return response()->json(['uploaded' => '/home/designoble/public_html/uploads/gallery/'.$filename]);
-        
+        return response()->json(['uploaded' => '/uploads/gallery/'.$filename]);
+
     }
 
     public function edit($id)
@@ -46,7 +46,7 @@ class GalleryController extends Controller
         $image = $request->file('gallery');
         $extension = $image->getClientOriginalExtension();
         $filename = uniqid() . '_' . time() . '.' . $extension;
-        $dir = '/home/designoble/public_html/uploads/gallery/';
+        $dir = 'E:/phpserver/htdocs/people-hiring/public/uploads/gallery/';
         $image->move($dir, $filename);
         @unlink($dir.$gallery->image);
         $gallery->image = $filename;

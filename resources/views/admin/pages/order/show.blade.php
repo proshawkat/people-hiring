@@ -19,6 +19,7 @@
                     <thead class="bg-light">
                         <tr>
                             <th scope="col" class="border-0">#</th>
+                            <th scope="col" class="border-0">Service Name</th>
                             <th scope="col" class="border-0">Name</th>
                             <th scope="col" class="border-0">Email</th>
                             <th scope="col" class="border-0">Phone</th>
@@ -30,6 +31,7 @@
                     	@foreach($orders as $or)
 	                        <tr>
 	                            <td>{{ $or->id }}</td>
+	                            <td>{{ $or->service->title }}</td>
 	                            <td>{{ $or->first_name }} {{ $or->last_name }}</td>
 	                            <td>{{ $or->email }}</td>
 	                            <td>{{ $or->phone }}</td>

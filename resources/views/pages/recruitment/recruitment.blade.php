@@ -103,7 +103,7 @@
                                 dummy text ever since the 1500s, when an unknown printe
                                 took a galley of type and scrambled it
                             </p>
-                            <a href="recruitment_process.html">
+                            <a href="#">
                                 <button class="learn-more">
                                     <div class="circle">
                                         <span class="icon arrow"></span>
