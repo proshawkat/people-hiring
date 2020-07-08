@@ -7,7 +7,7 @@
           <div class="col-lg-3 col-md-5 auth-form mx-auto my-auto">
             <div class="card">
               <div class="card-body">
-                <img class="auth-form__logo d-table mx-auto mb-3" src="{{ asset('back_assets/images/shards-dashboards-logo.svg')}}" alt="Shards Dashboards - Register Template">
+                <img class="auth-form__logo d-table mx-auto mb-3" src="{{ asset('back_assets/images/favicon.png')}}" alt="Shards Dashboards - Register Template">
                 <h5 class="auth-form__title text-center mb-4">{{ __('Access Your Account') }}</h5>
                 <form method="POST" action="{{ route('login') }}">
                   @csrf
@@ -45,7 +45,7 @@
                         {{ __('Forgot Your Password?') }}
                     </a>
                 @endif
-                <a class="ml-auto" href="{{ route('register') }}">Create new account?</a> --> 
+                <a class="ml-auto" href="{{ route('register') }}">Create new account?</a> -->
             </div>
           </div>
         </div>

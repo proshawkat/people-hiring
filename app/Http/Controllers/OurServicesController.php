@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use App\OurServices;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,7 @@ class OurServicesController extends Controller
         $service->price = $request->price;
 
         $extension = $request->file('image')->getClientOriginalExtension();
-        
+
         $filename = uniqid() . '_' . time() . '.' . $extension;
         $file = $request->file('image');
         $destinationPath = public_path('uploads/service');
@@ -51,7 +52,7 @@ class OurServicesController extends Controller
 
         if($request->file('image') != NULL){
             $extension = $request->file('image')->getClientOriginalExtension();
-        
+
             $filename = uniqid() . '_' . time() . '.' . $extension;
             $file = $request->file('image');
             $destinationPath = public_path('uploads/service');
@@ -60,12 +61,30 @@ class OurServicesController extends Controller
         }else{
             $service->image = $request->old_img;
         }
-        
+
 
         $service->save();
 
 
         return redirect('admin/services')->with('message', 'Service Update Successfully!');
+    }
+
+    public function delete($id){
+        $order = Order::where('ser_id', $id)->exists();
+
+        if($order) {
+            return redirect()->back()->with([
+                'status' => 'This service already used.'
+            ]);
+        }
+
+        OurServices::where([
+            'id' => $id
+        ])->delete();
+
+        return redirect()->back()->with([
+            'status' => 'Successfully deleted.'
+        ]);
     }
 
 }

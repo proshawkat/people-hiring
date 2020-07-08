@@ -39,7 +39,10 @@
 	                            <td>{{ $ser->title }}</td>
 	                            <td>{{ $ser->price }}</td>
                                 <td><img height="100" src="{{ asset('uploads/service/'.$ser->image) }}"></td>
-                                <td><a href="{{ url('admin/service/edit/'.$ser->id) }}">Edit</a></td>
+                                <td>
+                                    <a href="{{ url('admin/service/edit/'.$ser->id) }}">Edit</a>
+                                    <a href="{{ url('admin/service/delete/'.$ser->id) }}">Delete</a>
+                                </td>
 	                        </tr>
 	                    @endforeach
                     </tbody>

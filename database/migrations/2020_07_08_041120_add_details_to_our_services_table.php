@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProcessesTable extends Migration
+class AddDetailsToOurServicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateProcessesTable extends Migration
      */
     public function up()
     {
-        Schema::create('processes', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('our_services', function (Blueprint $table) {
+            $table->string('details')->after('title')->nullable();
         });
     }
 
@@ -26,6 +25,8 @@ class CreateProcessesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('processes');
+        Schema::table('our_services', function (Blueprint $table) {
+            $table->dropColumn('details');
+        });
     }
 }

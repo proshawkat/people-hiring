@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateServicePostsTable extends Migration
+class AddShortDetailsToOurServicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateServicePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('service_posts', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('our_services', function (Blueprint $table) {
+            $table->string('short_details')->after('title')->nullable();
         });
     }
 
@@ -26,6 +25,8 @@ class CreateServicePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('service_posts');
+        Schema::table('our_services', function (Blueprint $table) {
+            $table->dropColumn('short_details');
+        });
     }
 }
