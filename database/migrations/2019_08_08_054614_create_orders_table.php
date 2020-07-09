@@ -15,6 +15,8 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('ser_id');
+            $table->unsignedBigInteger('client_id');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email');
@@ -23,6 +25,10 @@ class CreateOrdersTable extends Migration
             $table->string('status');
             $table->string('n_status');
             $table->timestamps();
+
+
+            $table->foreign('client_id')->references('id')->on('clients');
+            $table->foreign('ser_id')->references('id')->on('our_services');
         });
     }
 

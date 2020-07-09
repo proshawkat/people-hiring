@@ -40,12 +40,6 @@
               </div>
             </div>
             <div class="auth-form__meta d-flex mt-4">
-                <!-- @if (Route::has('password.request'))
-                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
-                    </a>
-                @endif
-                <a class="ml-auto" href="{{ route('register') }}">Create new account?</a> -->
             </div>
           </div>
         </div>

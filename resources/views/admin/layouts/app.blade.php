@@ -59,6 +59,12 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a class="nav-link " href="{{ route('admin.client') }}">
+                  <i class="material-icons">&#xE8D1;</i>
+                  <span>Clients</span>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link " href="{{ route('admin.services') }}">
                   <i class="material-icons">&#xE8D1;</i>
                   <span>Services</span>
@@ -181,6 +187,7 @@
     <script src="{{ asset('back_assets/scripts/shards-dashboards.1.3.1.min.js') }}"></script>
     <script src="{{ asset('back_assets/fileinput/js/fileinput.js') }}"></script>
     <script src="{{ asset('back_assets/fileinput/themes/fas/theme.js') }}"></script>
+    @yield('ad_js')
     <script>
         $("#image").fileinput({
             theme: 'fas',

@@ -30,7 +30,12 @@ Route::get('service','ServicePostController@service');
 Route::get('how_we_work','ServicePostController@how_we_work');
 Route::get('designlimit','ServicePostController@designlimit');
 Route::get('faq','FaqController@faq');
-Auth::routes();
+
+Auth::routes([
+    'register' => false,
+    'verify' => true,
+    'reset' => false
+]);
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('admin/order','OrderController@getOrder')->name('admin.order');
@@ -48,9 +53,46 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('admin/gallery/edit/{id}','GalleryController@edit');
 	Route::post('admin/gallery/update','GalleryController@update');
 	Route::get('/home', 'AdminController@index')->name('home');
+
+
+	Route::get('admin/client', 'ClientController@index')->name('admin.client');
+	Route::get('admin/client/message/{id}', 'ClientController@messageIndex')->name('admin.client.message');
+	Route::post('admin/client/message/get', 'ClientController@getMessages')->name('admin.client.message.get');
+	Route::post('admin/client/message/send', 'ClientController@send')->name('admin.client.message.send');
 });
 
 Route::post('subStore', 'SubscriberController@store')->name('subStore');
 Route::get('recruitment', 'HomeController@recruitment')->name('recruitment');
 Route::get('sitemap', 'HomeController@sitemap')->name('sitemap');
 Route::get('pagenotfound', ['as'=>'notfound', 'use'=>'HomeController@pagenotfound']);
+
+Route::middleware(['guest'])->group(function(){
+
+    Route::get('/client/login', function () {
+        return view('client/auth/login');
+    });
+
+    Route::get('/client/register', 'Auth\AuthClientController@showRegiter')->name('client.register');
+    Route::post('/client/register', 'Auth\AuthClientController@registerClient')->name('client.register');
+    Route::post('/client/login', 'Auth\LoginClientController@login')->name('client.login');
+
+    Route::get('email/resend', 'Client\Auth\VerificationController@resend')->name('verification.resend');
+    Route::get('email/verify', 'Client\Auth\VerificationController@show')->name('verification.notice');
+    Route::get('email/verify/{id}/{hash}', 'Client\Auth\VerificationController@verify')->name('verification.verify');
+});
+
+Route::group(['middleware'  => 'auth:clients'],function(){
+    Route::get('/client/home', 'Client\HomeController@index')->name('client.home');
+
+    //message
+    Route::get('/client/message', 'Client\MessageController@index')->name('client.message');
+    Route::post('/client/message/send', 'Client\MessageController@send')->name('client.message.send');
+
+    //    Orders
+    Route::get('/client/services', 'Client\OrderController@index')->name('client.services');
+
+    //    settings
+    Route::get('/client/settings', 'Client\SettingsController@index')->name('client.settings');
+    Route::post('/client/profile/update', 'Client\SettingsController@update')->name('client.profile.update');
+});
+
