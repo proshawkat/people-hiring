@@ -310,6 +310,36 @@
                     '_token': '{{ csrf_token() }}'
                 },
                 success: function (data) {
+                    // var html = ''
+                    // for(var i=0; i < data.messages.length; i++) {
+                    //     if (data.messages[i].from == auth_id) {
+                    //         html += '<div class="d-flex justify-content-end mb-4">'
+                    //             html += '<div class="msg_cotainer_send">'
+                    //                 html += '<span>' + data.messages[i].message + '</span>'
+                    //             html += '</div>'
+                    //             html += '<div class="img_cont_msg">'
+                    //             if (data.messages[i].client.avatar) {
+                    //                 html += '<img class="rounded-circle user_img_msg" src="' + base_url + '/storage/client/' + data.messages[i].client.avatar + '" alt="">'
+                    //             } else {
+                    //                 html += '<img class="rounded-circle user_img_msg" src="assets/img/client1.png" alt="">'
+                    //             }
+                    //             html += '</div>'
+                    //         html += '</div>'
+                    //     } else {
+                    //         html += '<div class="d-flex justify-content-start mb-4">'
+                    //             html += '<div class="img_cont_msg">'
+                    //             if (data.messages[i].client.avatar) {
+                    //                 html += '<img class="rounded-circle user_img_msg" src="' + base_url + '/storage/client/' + data.messages[i].client.avatar + '" alt="">'
+                    //             } else {
+                    //                 html += '<img class="rounded-circle user_img_msg" src="assets/img/client1.png" alt="">'
+                    //             }
+                    //             html += '</div>'
+                    //             html += '<div class="msg_cotainer_send">'
+                    //                 html += '<span>' + data.messages[i].message + '</span>'
+                    //             html += '</div>'
+                    //         html += '</div>'
+                    //     }
+                    // }
                     $('.chat_area--conversation').html(data)
                 },
                 error: function (data) {

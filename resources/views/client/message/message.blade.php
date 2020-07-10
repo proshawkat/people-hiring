@@ -12,15 +12,15 @@
 
 
 @foreach($messages as $message)
-    @if($message->from == Auth::id())
+    @if($message->from == Auth::guard('clients')->user()->id)
         <div class="d-flex justify-content-end mb-4">
             <div class="msg_cotainer_send">
-                {!!  $message->message  !!}
-                <span class="msg_time_send">8:55 AM, Today</span>
+                <span>{!!  $message->message  !!}</span>
+                <span style="width: 300px;" class="msg_time_send">{{ \Carbon\Carbon::parse($message->created_at ?? '')->format('d/m/Y') }}</span>
             </div>
             <div class="img_cont_msg">
-                @if( Auth::user()->avatar)
-                    <img class="rounded-circle user_img_msg" src="{{ url('storage/user/', Auth::user()->avatar) }}" alt="">
+                @if( Auth::guard('clients')->user()->avatar)
+                    <img class="rounded-circle user_img_msg" src="{{ url('storage/client', Auth::guard('clients')->user()->avatar) }}" alt="">
                 @else
                     <img class="rounded-circle user_img_msg" src="{{ asset('assets/img/client1.png') }}" alt="">
                 @endif
@@ -29,15 +29,15 @@
     @else
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                @if( $message->client->avatar)
-                    <img src="{{ url('storage/client/', $message->client->avatar) }}" alt="" class="rounded-circle user_img_msg">
+                @if( $admin->avatar)
+                    <img src="{{ url('storage/user', $admin->avatar) }}" alt="" class="rounded-circle user_img_msg">
                 @else
                     <img src="{{ asset('assets/img/client1.png') }}" alt="" class="rounded-circle user_img_msg">
                 @endif
             </div>
             <div class="msg_cotainer">
-                {!!  $message->message  !!}
-                <span class="msg_time">8:40 AM, Today</span>
+                <span>{!!  $message->message  !!}</span>
+                <span style="width: 300px;" class="msg_time">{{ \Carbon\Carbon::parse($message->created_at ?? '')->format('d/m/Y') }}</span>
             </div>
         </div>
     @endif

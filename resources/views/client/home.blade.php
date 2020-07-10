@@ -15,8 +15,8 @@
             <div class="row">
                 <div class="col-3" style="background-color: #f3f3f3; border-radius: 10px; padding-top: 1rem;">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link {{  request()->path() == 'client/message' ? 'active' : '' }}" href="{{ route('client.message') }}">Message</a>
-                        <a class="nav-link {{  request()->path() == 'client/services' ? 'active' : '' }}" href="{{ route('client.services') }}">Service tacked</a>
+                        <a class="nav-link {{  request()->path() == 'client/services' || request()->path() == 'client/home' ? 'active' : '' }}" href="{{ route('client.services') }}">Service ordered</a>
+                        <a class="nav-link {{  request()->path() == 'client/message' ? 'active' : '' }}" href="{{ route('client.message') }}">Chat with admin</a>
                         <a class="nav-link {{  request()->path() == 'client/settings' ? 'active' : '' }}" href="{{ route('client.settings') }}">Settings</a>
                         <a class="nav-link" href="{{ route('logout') }}"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

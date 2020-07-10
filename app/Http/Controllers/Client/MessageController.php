@@ -13,7 +13,87 @@ class MessageController extends Controller
 {
     public function index(){
         $admin = User::first();
-        return view('client.message.index')->with(['admin' => $admin]);
+
+        if (!Conversation::where('from', Auth::guard('clients')->user()->id)
+                ->where('to', $admin->id)
+                ->exists()
+            &&
+            !Conversation::where('from', $admin->id)
+                ->where('to', Auth::guard('clients')->user()->id)
+                ->exists()
+        ) {
+            $thread = new Conversation();
+            $thread->from = Auth::id();
+            $thread->to = $admin->id;
+            $thread->status = 0;
+            $thread->save();
+
+            $threadId = $thread->id;
+
+        } else {
+            if (Conversation::where('from', Auth::guard('clients')->user()->id)
+                ->where('to', $admin->id)
+                ->exists()
+            ) {
+
+                $threadId = Conversation::where('from', Auth::guard('clients')->user()->id)->where('to', $admin->id)->value('id');
+
+            } else {
+                $threadId = Conversation::where('from', $admin->id)->where('to', Auth::guard('clients')->user()->id)->value('id');
+            }
+
+        }
+        $messages = ConversationReply::with('client')->where('conversation_id', $threadId)->get();
+
+        return view('client.message.index')->with([
+            'messages'=>$messages,
+            'admin' => $admin
+        ]);
+    }
+
+    public function getMessages(Request $request)
+    {
+        $user_id = $request->user_id;
+
+        if (!Conversation::where('from', Auth::guard('clients')->user()->id)
+                ->where('to', $user_id)
+                ->exists()
+            &&
+            !Conversation::where('from', $user_id)
+                ->where('to', Auth::guard('clients')->user()->id)
+                ->exists()
+        ) {
+            $thread = new Conversation();
+            $thread->from = Auth::guard('clients')->user()->id;
+            $thread->to = $user_id;
+            $thread->status = 0;
+            $thread->save();
+
+            $threadId = $thread->id;
+
+        } else {
+            if (Conversation::where('from', Auth::guard('clients')->user()->id)
+                ->where('to', $user_id)
+                ->exists()
+            ) {
+
+                $threadId = Conversation::where('from', Auth::guard('clients')->user()->id)->where('to', $user_id)->value('id');
+
+            } else {
+                $threadId = Conversation::where('from', $user_id)->where('to', Auth::guard('clients')->user()->id)->value('id');
+            }
+
+        }
+        $messages = ConversationReply::with('client')->where('conversation_id', $threadId)->get();
+        $admin = User::first();
+//        return response()->json([
+//            'messages' => $messages,
+//            'admin' => $admin
+//        ]);
+        return view('admin.client.message')->with([
+            'messages' => $messages,
+            'admin' => $admin
+        ]);
     }
 
     public function send(Request $request){

@@ -18,9 +18,42 @@ class ClientController extends Controller
 
     public function messageIndex($id){
         $clients = Client::find($id);
-//        $conversations = Conversation::where('from', $id)->get();
-//        dd($conversations);
-        return view('admin.client.message_index')->with(['clients' => $clients]);
+
+        if (!Conversation::where('from', Auth::id())
+                ->where('to', $id)
+                ->exists()
+            &&
+            !Conversation::where('from', $id)
+                ->where('to', Auth::id())
+                ->exists()
+        ) {
+            $thread = new Conversation();
+            $thread->from = Auth::id();
+            $thread->to = $id;
+            $thread->status = 0;
+            $thread->save();
+
+            $threadId = $thread->id;
+
+        } else {
+            if (Conversation::where('from', Auth::id())
+                ->where('to', $id)
+                ->exists()
+            ) {
+
+                $threadId = Conversation::where('from', Auth::id())->where('to', $id)->value('id');
+
+            } else {
+                $threadId = Conversation::where('from', $id)->where('to', Auth::id())->value('id');
+            }
+
+        }
+        $messages = ConversationReply::with('client')->where('conversation_id', $threadId)->get();
+
+        return view('admin.client.message_index')->with([
+            'messages'=>$messages,
+            'clients' => $clients
+        ]);
     }
 
     public function getMessages(Request $request)
@@ -56,7 +89,7 @@ class ClientController extends Controller
             }
 
         }
-        $messages = ConversationReply::where('conversation_id', $threadId)->get();
+        $messages = ConversationReply::with('client')->where('conversation_id', $threadId)->get();
 
         return view('admin.client.message')->with([
             'messages' => $messages

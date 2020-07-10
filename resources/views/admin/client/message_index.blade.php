@@ -251,7 +251,7 @@
                 </div>
             </div>
             <div class="card-body msg_card_body chat_area--conversation">
-{{--                @include('admin.client.message')--}}
+                @include('admin.client.message')
             </div>
             <div class="card-footer">
                 <form action="#" enctype="multipart/form-data" method="post">
@@ -306,23 +306,22 @@
                 },
                 success: function (data) {
                     console.log(data)
-                    {{--if (data == 'success') {--}}
-                    {{--    $.ajax({--}}
-                    {{--        url: '{{ url('/message/get') }}',--}}
-                    {{--        type: 'POST',--}}
-                    {{--        data: {--}}
-                    {{--            'userId': $('#user_id').val(),--}}
-                    {{--            '_token': '{{ csrf_token() }}'--}}
-                    {{--        },--}}
-                    {{--        success: function (data) {--}}
-                    {{--            $('.chat_area--conversation').html(data)--}}
-                    {{--        },--}}
-                    {{--        error: function (data) {--}}
-                    {{--            alert("Something went wrong");--}}
-                    {{--            console.log(data.responseText);--}}
-                    {{--        }--}}
-                    {{--    });--}}
-                    {{--}--}}
+                    if (data == 'success') {
+                        $.ajax({
+                            url: '{{ url('/admin/client/message/get') }}',
+                            type: 'POST',
+                            data: {
+                                'userId': $('#user_id').val(),
+                                '_token': '{{ csrf_token() }}'
+                            },
+                            success: function (data) {
+                                $('.chat_area--conversation').html(data)
+                            },
+                            error: function (data) {
+                                console.log(data.responseText);
+                            }
+                        });
+                    }
                 }
             })
         });

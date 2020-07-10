@@ -7,6 +7,8 @@
         }
         .capabilities_box_cntn{
             margin-top: 0px;
+            box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+            border-radius: 10px;
         }
     </style>
     <section class="capabilites_area">
