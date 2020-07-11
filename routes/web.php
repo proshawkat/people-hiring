@@ -88,6 +88,7 @@ Route::group(['middleware'  => 'auth:clients'],function(){
     Route::get('/client/message', 'Client\MessageController@index')->name('client.message');
     Route::post('/client/message/send', 'Client\MessageController@send')->name('client.message.send');
     Route::post('/client/message/get', 'Client\MessageController@getMessages')->name('client.message.get');
+    Route::post('/client/message/send/status', 'Client\MessageController@statusUpdate')->name('client.message.send.status');
 
     //    Orders
     Route::get('/client/services', 'Client\OrderController@index')->name('client.services');

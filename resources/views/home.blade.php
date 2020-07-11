@@ -9,7 +9,7 @@
             </div>
             <div class="col-12 col-sm-4 d-flex align-items-center">
                 <div class="btn-group btn-group-sm btn-group-toggle d-inline-flex mb-4 mb-sm-0 mx-auto" role="group" aria-label="Page actions">
-                    
+
                 </div>
             </div>
             <div class="col-12 col-sm-4 d-flex align-items-center">
@@ -83,10 +83,10 @@
                 </div>
             </div> -->
         </div>
-        
+
     </div>
     <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
-        <span class="copyright ml-auto my-auto mr-2">Copyright © 2020 cse 1714 batch</span>
+        <span class="copyright ml-auto my-auto mr-2">Copyright © 2020 IT Solution</span>
     </footer>
 </main>
 @endsection

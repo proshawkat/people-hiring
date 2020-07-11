@@ -3,7 +3,7 @@
         <div class="row">
             <!-- Logo arae -->
             <div class="col-sm-9 col-md-3 col-lg-3 col-xl-3">
-                <h2>People<span>Hire</span></h2>
+                <h2>IT<span>Solution</span></h2>
                 <div class="header_cntn">
                     <figure>
                         <a href="{{ url('/') }}">
@@ -31,7 +31,7 @@
                                         <ul class="sina-menu link-effect-14">
                                             <li class="{{  request()->path() == '/' || request()->path() == 'recruitment' ? 'active' : '' }}"><a href="{{ url('/') }}"><span>Home </span></a></li>
                                             <li class="{{  request()->path() == 'about' ? 'active' : '' }}"><a href="{{ url('/about') }}"><span>About </span></a></li>
-                                            <li class="{{  request()->path() == 'price' || (request()->path() == 'price/single_price/pro' || request()->path() == 'price/single_price/standard') ? 'active' : '' }}"><a href="{{ url('price') }}"><span>Price </span></a></li>
+                                            <li class="{{  request()->path() == 'price' || (request()->path() == 'price/single_price/pro' || request()->path() == 'price/single_price/standard') ? 'active' : '' }}"><a href="{{ url('price') }}"><span>Services </span></a></li>
                                             <li class="{{  request()->path() == 'service' ? 'active' : '' }}"><a href="{{ url('service') }}"><span>Our Work </span></a></li>
                                             <li class="{{  request()->path() == 'contact' ? 'active' : '' }}"><a href="{{ url('contact') }}"><span>Contact </span></a></li>
                                             @if(!Auth::guard('clients')->user())
@@ -60,7 +60,7 @@
                                     <ul class="link">
                                         <li class="{{  request()->path() == '/' || request()->path() == 'recruitment' ? 'active' : '' }}"><a href="{{ url('/') }}"><span>Home </span></a></li>
                                             <li class="{{  request()->path() == 'about' ? 'active' : '' }}"><a href="{{ url('/about') }}"><span>About </span></a></li>
-                                            <li class="{{  request()->path() == 'price' || (request()->path() == 'price/single_price/pro' || request()->path() == 'price/single_price/standard') ? 'active' : '' }}"><a href="{{ url('price') }}"><span>Price </span></a></li>
+                                            <li class="{{  request()->path() == 'price' || (request()->path() == 'price/single_price/pro' || request()->path() == 'price/single_price/standard') ? 'active' : '' }}"><a href="{{ url('price') }}"><span>Services </span></a></li>
                                             <li class="{{  request()->path() == 'service' ? 'active' : '' }}"><a href="{{ url('service') }}"><span>Our Work </span></a></li>
                                             <li class="{{  request()->path() == 'contact' ? 'active' : '' }}"><a href="{{ url('contact') }}"><span>Contact </span></a></li>
                                             <li class="sina-nav-cta-btn"><a href="{{ url('get_started') }}">Get Started!</a></li>

@@ -83,7 +83,7 @@
                         <a href="{{ url('sitemap') }}">Sitemap</a>
                     </div>
                     <div class="social_icon footer_bootm_right_txt">
-                        <a href="#">Copyright © 2020 cse 1714 batch. All rights reserved.</a>
+                        <a href="#">Copyright © 2020 IT Solution. All rights reserved.</a>
                     </div>
                 </div>
             </div>

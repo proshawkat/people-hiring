@@ -233,7 +233,6 @@
                     </div>
                     <div class="user_info">
                         <span>Chat with {{ $clients->name }}</span>
-                        <p>1767 Messages</p>
                     </div>
                     <div class="video_cam">
                         <span><i class="fas fa-video"></i></span>

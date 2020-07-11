@@ -145,4 +145,8 @@ class MessageController extends Controller
 
         }
     }
+
+    public function statusUpdate(Request $request){
+        $status = ConversationReply::where('to', Auth::guard('clients')->user()->id)->update(['status'=> 1]);
+    }
 }

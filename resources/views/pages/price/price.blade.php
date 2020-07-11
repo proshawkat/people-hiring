@@ -39,7 +39,11 @@
                                     <p>-Integrated Project Management tools</p>
                                 </div>
                                 <div class="bussines_plan_btn">
-                                    <a class="p_banner_btn checkoutModal" data-toggle="modal" data-price="{{ $servcie->price }}" data-id="{{ $servcie->id }}" data-stitle="{{ $servcie->title }}" href="#checkoutModal">Get Started!</a>
+                                    @if(Auth::guard('clients')->user())
+                                        <a class="p_banner_btn checkoutModal" data-toggle="modal" data-price="{{ $servcie->price }}" data-id="{{ $servcie->id }}" data-stitle="{{ $servcie->title }}" href="#checkoutModal">Get Started!</a>
+                                    @else
+                                        <a class="p_banner_btn checkoutModal" href="{{ route('client.login') }}">Get Started!</a>
+                                    @endif
                                 </div>
                                 <img class="p_banner_lft" src="{{ asset('front_assets/images/inner_images/p_details_01.png') }}">
                             </div>
@@ -55,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </dov>
     </div>
 </section>
@@ -116,7 +120,7 @@
                 <div class="option_contn_box">
                     <h4>For startups</h4>
                     <h6>Just launching or have launched your startup? Strap for time or lack design skills? Let us design so that you can concentrate on scaling instead of learning Photoshop yourself. Grow your business fast without the stress. </h6>
-                    
+
                     <a href="{{ url('get_started') }}">
                         <button class="learn-more">
                             <div class="circle">
@@ -291,7 +295,7 @@
                                 <div class="vc_column-inner">
                                     <div class="wpb_wrapper">
                                         <div class="row">
-                                            
+
                                             <div class="form-group col-md-6">
                                                 <input required="required" type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name">
                                             </div>
@@ -355,7 +359,7 @@
                                                 <input required="required" type="text" class="form-control card-cvc" autocomplete='off' placeholder="CVC">
                                             </div>
 
-                                        </div>                                    
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="ssl-action-wrp">
@@ -375,7 +379,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>               
+                    </div>
                 </div>
             </div>
             </form>
@@ -417,7 +421,7 @@
             $errorMessage = $form.find('div.error'),
             valid         = true;
             $errorMessage.addClass('hide');
-     
+
             $('.has-error').removeClass('has-error');
         $inputs.each(function(i, el) {
             var $input = $(el);
@@ -427,7 +431,7 @@
                 e.preventDefault();
             }
         });
-      
+
         if (!$form.data('cc-on-file')) {
           e.preventDefault();
           Stripe.setPublishableKey($form.data('stripe-publishable-key'));
@@ -438,9 +442,9 @@
             exp_year: $('.card-expiry-year').val()
           }, stripeResponseHandler);
         }
-      
+
       });
-      
+
       function stripeResponseHandler(status, response) {
             if (response.error) {
                 $('.error')
@@ -454,7 +458,7 @@
                 $form.get(0).submit();
             }
         }
-      
+
     });
 </script>
 <script type="text/javascript">

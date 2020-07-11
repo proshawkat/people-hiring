@@ -45,8 +45,7 @@
                                 <td>{{ $value->phone }}</td>
                                 <td>{{ $value->gender }}</td>
                                 <td>
-                                    <a class="btn" href="{{ route('admin.client.message',$value->id ) }}">Message Reply</a>
-                                    <a class="btn" href="">Approved</a>
+                                    <a class="btn btn-success" href="{{ route('admin.client.message',$value->id ) }}">Message Reply</a>
                                 </td>
                             </tr>
                         @endforeach

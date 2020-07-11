@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>People Hire - Unlimited Graphic Design | Flat Monthly Fee | Dedicated developer Team | Dedicated Design Team</title>
+    <title>IT Solution - Unlimited Graphic Design | Dedicated developer Team | Dedicated Design Team</title>
     <meta name="description" content=""/>
     <link rel="canonical" href="https://www.peoplehiring.com/" />
     <meta property="og:locale" content="en_US" />
