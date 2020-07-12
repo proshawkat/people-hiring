@@ -19,7 +19,7 @@
                         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                             <div class="capabilities_box_hdr">
                                 <h3>Empty Order</h3>
-                                <p>You can see our all services and order now<a href="{{ url('price') }}"> Our services</a></p>
+                                <p>If you want see our all services and order<a href="{{ url('price') }}"> click here</a></p>
                             </div>
                         </div>
                     @else

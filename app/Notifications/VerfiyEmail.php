@@ -44,9 +44,12 @@ class VerfiyEmail extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
+                    ->subject('It Solutions')
                     ->line('The introduction to the notification.')
                     ->action('Verify Email Address', $this->verificationUrl($notifiable))
-                    ->line('Thank you for using our application!');
+                    ->line('Thank you for using our application!')
+                    ->view('vendor.notifications.verify_email', ['client' => $this->client]
+                    );
     }
 
     protected function verificationUrl($notifiable)

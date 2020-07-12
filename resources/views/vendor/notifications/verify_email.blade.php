@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="x-apple-disable-message-reformatting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hiring Now</title>
+    <title>IT Solutions</title>
     <style type="text/css">
         a { text-decoration: none; outline: none; }
         @media (max-width: 649px) {
@@ -54,12 +54,6 @@
             .o_sans, .o_heading { font-family: "Roboto", sans-serif !important; }
             .o_heading, strong, b { font-weight: 700 !important; }
             a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; }
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Sheep & Pelle Book";
-            letter-spacing: 0.025rem;
         }
 
         .container {
@@ -157,7 +151,9 @@
             <tbody>
             <tr>
                 <td class="o_bg-primary o_px-md o_py-md o_sans o_text" align="center" style="font-family: Helvetica, Arial, sans-serif;margin-top: 0px;margin-bottom: 0px;font-size: 16px;line-height: 24px;background-color: #212529;padding-left: 24px;padding-right: 24px;padding-top: 24px;padding-bottom: 24px;">
-                    <p style="margin-top: 0px;margin-bottom: 0px;"><a class="o_text-white" href="#" style="text-decoration: none;outline: none;color: #ffffff;"><img src="https://shawkatali.com/images/logo.png" width="136" height="36" alt="Hire" style="max-width: 136px;-ms-interpolation-mode: bicubic;vertical-align: middle;border: 0;line-height: 100%;height: auto;outline: none;text-decoration: none;"></a></p>
+                    <p style="margin-top: 0px;margin-bottom: 0px;"><a class="o_text-white" href="#" style="text-decoration: none;outline: none;color: #ffffff;">
+                            <img src="https://shawkatali.com/images/logo.png" width="136" height="36" alt="Hire" style="max-width: 136px;-ms-interpolation-mode: bicubic;vertical-align: middle;border: 0;line-height: 100%;height: auto;outline: none;text-decoration: none;"></a>
+                    </p>
                 </td>
             </tr>
             </tbody>
@@ -169,7 +165,7 @@
             <td colspan="3" style="padding-bottom: 49px">Dear {{ $client->name }},</td>
         </tr>
         <tr>
-            <td colspan="3" style="padding-bottom: 55px">Thanks for signing up for an account at the House of SHEEP & PELLE.</td>
+            <td colspan="3" style="padding-bottom: 55px">Thanks for signing up for an account at the A One IT Solutions</td>
         </tr>
         <tr>
             <td colspan="3" style="padding-bottom: 55px">Please click the button below to verify your email address and activate your account.</td>
@@ -188,16 +184,16 @@
         <tr>
             <td colspan="3" class="text-center social-icons">
                 <a href="#">
-                    <img src="{{ asset('public/frontend/facebook.svg') }}" width="39" height="39" alt="">
+                    <img src="https://shawkatali.com/images/facebook.png" width="39" height="39" alt="">
                 </a>
                 <a href="#">
-                    <img src="{{ asset('public/frontend/instagram.svg') }}" width="39" height="39" alt="">
+                    <img src="https://shawkatali.com/images/instegram.png" width="39" height="39" alt="">
                 </a>
                 <a href="#">
-                    <img src="{{ asset('public/frontend/twitter.svg') }}" width="39" height="39" alt="">
+                    <img src="https://shawkatali.com/images/twitter.png" width="39" height="39" alt="">
                 </a>
                 <a href="#">
-                    <img src="{{ asset('public/frontend/youtube.svg') }}" width="39" height="39" alt="">
+                    <img src="https://shawkatali.com/images/youtube.png" width="39" height="39" alt="">
                 </a>
             </td>
         </tr>

@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'sales@designoble.com'),
-        'name' => env('MAIL_FROM_NAME', 'Designoble'),
+        'address' => env('MAIL_FROM_ADDRESS', 'shawkatali527@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'A-one IT Solutions'),
     ],
 
     /*

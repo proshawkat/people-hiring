@@ -82,19 +82,19 @@ Route::middleware(['guest'])->group(function(){
 });
 
 Route::group(['middleware'  => 'auth:clients'],function(){
-    Route::get('/client/home', 'Client\OrderController@index')->name('client.home');
+    Route::get('/client/home', 'Client\OrderController@index')->name('client.home')->middleware('verified');;
 
     //message
-    Route::get('/client/message', 'Client\MessageController@index')->name('client.message');
-    Route::post('/client/message/send', 'Client\MessageController@send')->name('client.message.send');
-    Route::post('/client/message/get', 'Client\MessageController@getMessages')->name('client.message.get');
-    Route::post('/client/message/send/status', 'Client\MessageController@statusUpdate')->name('client.message.send.status');
+    Route::get('/client/message', 'Client\MessageController@index')->name('client.message')->middleware('verified');;
+    Route::post('/client/message/send', 'Client\MessageController@send')->name('client.message.send')->middleware('verified');;
+    Route::post('/client/message/get', 'Client\MessageController@getMessages')->name('client.message.get')->middleware('verified');;
+    Route::post('/client/message/send/status', 'Client\MessageController@statusUpdate')->name('client.message.send.status')->middleware('verified');;
 
     //    Orders
-    Route::get('/client/services', 'Client\OrderController@index')->name('client.services');
+    Route::get('/client/services', 'Client\OrderController@index')->name('client.services')->middleware('verified');;
 
     //    settings
-    Route::get('/client/settings', 'Client\SettingsController@index')->name('client.settings');
-    Route::post('/client/profile/update', 'Client\SettingsController@update')->name('client.profile.update');
+    Route::get('/client/settings', 'Client\SettingsController@index')->name('client.settings')->middleware('verified');;
+    Route::post('/client/profile/update', 'Client\SettingsController@update')->name('client.profile.update')->middleware('verified');;
 });
 

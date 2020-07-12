@@ -224,7 +224,7 @@
             <div class="row justify-content-center h-100">
                 <div class="col-md-12 col-xl-12 chat">
                     <div class="card">
-                        <div class="card-header msg_head">
+                        <div class="card-header msg_head"style="background: #131313;">
                             <div class="d-flex bd-highlight">
                                 <div class="img_cont">
                                     @if( $admin->avatar)
@@ -232,24 +232,10 @@
                                     @else
                                         <img src="{{ asset('assets/img/client1.png') }}" alt="" class="rounded-circle user_img">
                                     @endif
-                                    <span class="online_icon"></span>
                                 </div>
                                 <div class="user_info">
                                     <span>Chat with Admin</span>
                                 </div>
-                                <div class="video_cam">
-                                    <span><i class="fas fa-video"></i></span>
-                                    <span><i class="fas fa-phone"></i></span>
-                                </div>
-                            </div>
-                            <span id="action_menu_btn"><i class="fas fa-ellipsis-v"></i></span>
-                            <div class="action_menu">
-                                <ul>
-                                    <li><i class="fas fa-user-circle"></i> View profile</li>
-                                    <li><i class="fas fa-users"></i> Add to close friends</li>
-                                    <li><i class="fas fa-plus"></i> Add to group</li>
-                                    <li><i class="fas fa-ban"></i> Block</li>
-                                </ul>
                             </div>
                         </div>
                         <div class="card-body msg_card_body chat_area--conversation">
@@ -259,12 +245,9 @@
                             <form action="#" enctype="multipart/form-data" method="post">
                                 <input type="text" hidden id="user_id" value="{{ $admin->id }}">
                                 <div class="input-group">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
-                                    </div>
                                     <textarea id="message" name="message" class="form-control type_msg" placeholder="Type your message..."></textarea>
                                     <div id="reply" class="input-group-append">
-                                        <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+                                        <span class="input-group-text send_btn"><i class="fa fa-location-arrow"></i></span>
                                     </div>
                                 </div>
                             </form>
