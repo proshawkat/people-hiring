@@ -304,8 +304,8 @@
                     '_token': '{{ csrf_token() }}'
                 },
                 success: function (data) {
-                    console.log(data)
                     if (data == 'success') {
+                        $('#message').val('');
                         $.ajax({
                             url: '{{ url('/admin/client/message/get') }}',
                             type: 'POST',

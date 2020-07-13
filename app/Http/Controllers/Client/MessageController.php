@@ -90,7 +90,7 @@ class MessageController extends Controller
 //            'messages' => $messages,
 //            'admin' => $admin
 //        ]);
-        return view('admin.client.message')->with([
+        return view('client.message.message')->with([
             'messages' => $messages,
             'admin' => $admin
         ]);

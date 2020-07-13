@@ -89,10 +89,12 @@ class ClientController extends Controller
             }
 
         }
-        $messages = ConversationReply::with('client')->where('conversation_id', $threadId)->get();
+        $messages = ConversationReply::where('conversation_id', $threadId)->get();
+        $clients = Client::where('id', $user_id)->first();
 
         return view('admin.client.message')->with([
-            'messages' => $messages
+            'messages' => $messages,
+            'clients' => $clients
         ]);
     }
 
@@ -145,6 +147,42 @@ class ClientController extends Controller
             return $exception->getMessage();
 
         }
+    }
+
+    public function blockUser($id){
+        $client = Client::where('id', $id)->first();
+
+        if($client->status == 1) {
+            $client->update(['status' => 2]);
+        }else{
+            $client->update(['status' => 1]);
+        }
+
+        return redirect()->back()->with('success', ['Client status updated successfully ']);
+    }
+
+    public function delete($id){
+        $reply = Conversation::where('from', $id)->orWhere('to', $id)->exists();
+        if($reply) {
+            dd($id);
+
+            Conversation::where('from', $id)->orWhere('to', $id)->delete();
+
+            ConversationReply::where( 'id', $id)->orWhere('to', $id)->delete();
+
+            return redirect()->back()->with([
+                'status' => 'success',
+                'message' => 'Successfully deleted.'
+            ]);
+        }
+
+        Client::where([
+            'id' => $id
+        ])->delete();
+
+        return redirect()->back()->with([
+            'status' => 'Successfully deleted.'
+        ]);
     }
 
 }

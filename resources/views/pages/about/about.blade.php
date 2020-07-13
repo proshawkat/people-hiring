@@ -21,13 +21,13 @@
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="design_support_cntn recruitment_process_images">
-                        <img src="{{ asset('front_assets/images/inner_images/about_01.png') }}" class="img-fluid" alt="skill people logo">
+                        <img src="{{ asset('front_assets/images/inner_images/about_01.png') }}" class="img-fluid" alt="IT Solutions logo">
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <div class="design_support_cntn">
                         <h3>Tired of unreliable freelancers or expensive agencies? Plug our experts in your team!</h3>
-                        <p class="defult_txt">Peopele Hiring is the largest graphic design and web development platform that provides unlimited, high-quality design work for thousands of businesses for a flat rate. People Hiring has been helping businesses of all sorts, from start up to fortune 500 enterprises, grow their businesses by expanding their services, growing their web presence, and iconizing their brand. From finding a designer, to communicating your needs and revisions, to payments, the whole process can be frustrating.</p>
+                        <p class="defult_txt">IT Solutions is the largest graphic design and web development platform that provides unlimited, high-quality design work for thousands of businesses for a flat rate. IT Solutions has been helping businesses of all sorts, from start up to fortune 500 enterprises, grow their businesses by expanding their services, growing their web presence, and iconizing their brand. From finding a designer, to communicating your needs and revisions, to payments, the whole process can be frustrating.</p>
                         <div class="design_limite_box_cntn">
                             <a href="{{ url('price') }}">
                                 <button class="learn-more learn_more_about">
@@ -79,7 +79,7 @@
                 <div class="about_box">
                     <img src="{{ asset('front_assets/images/inner_images/team-05.png') }}" alt="our team">
                     <h4>SHAMS NAHIYAN</h4>
-                    <h6>Developer</h6>
+                    <h6>Digital Marketer</h6>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -97,7 +97,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div class="design_limite_cntn">
-                    <img src="{{ asset('front_assets/images/inner_images/about_02.png') }}" class="img-fluid" alt="skill people logo">
+                    <img src="{{ asset('front_assets/images/inner_images/about_02.png') }}" class="img-fluid" alt="IT Solutions logo">
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">

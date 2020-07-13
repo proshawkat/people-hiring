@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="card-body p-0 pb-3 text-center">
-                <table class="table mb-0">
+                <table class="table mb-0 table-bordered">
                     <thead class="bg-light">
                         <tr>
                             <th scope="col" class="border-0">#</th>
@@ -40,8 +40,8 @@
 	                            <td>{{ $ser->price }}</td>
                                 <td><img height="100" src="{{ asset('uploads/service/'.$ser->image) }}"></td>
                                 <td>
-                                    <a href="{{ url('admin/service/edit/'.$ser->id) }}">Edit</a>
-                                    <a href="{{ url('admin/service/delete/'.$ser->id) }}">Delete</a>
+                                    <a class="btn btn-success" href="{{ url('admin/service/edit/'.$ser->id) }}">Edit</a>
+                                    <a class="btn btn-danger" href="{{ url('admin/service/delete/'.$ser->id) }}">Delete</a>
                                 </td>
 	                        </tr>
 	                    @endforeach

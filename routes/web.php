@@ -57,6 +57,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('admin/client', 'ClientController@index')->name('admin.client');
 	Route::get('admin/client/message/{id}', 'ClientController@messageIndex')->name('admin.client.message');
+	Route::get('admin/client/block/{id}', 'ClientController@blockUser')->name('admin.client.block');
+	Route::get('admin/client/delete/{id}', 'ClientController@delete')->name('admin.client.delete');
 	Route::post('admin/client/message/get', 'ClientController@getMessages')->name('admin.client.message.get');
 	Route::post('admin/client/message/send', 'ClientController@send')->name('admin.client.message.send');
 });

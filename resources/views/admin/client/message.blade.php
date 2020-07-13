@@ -16,7 +16,7 @@
         <div class="d-flex justify-content-end mb-4">
             <div class="msg_cotainer_send">
                 {!!  $message->message  !!}
-                <span class="msg_time_send">8:55 AM, Today</span>
+                <span style="width: 100px;" class="msg_time_send">{{ \Carbon\Carbon::parse($message->created_at ?? '')->diffForHumans() }}</span>
             </div>
             <div class="img_cont_msg">
                 @if( Auth::user()->avatar)
@@ -29,15 +29,15 @@
     @else
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                @if( $message->client->avatar)
-                    <img src="{{ url('storage/client/', $message->client->avatar) }}" alt="" class="rounded-circle user_img_msg">
+                @if( $clients->avatar)
+                    <img src="{{ url('storage/client/', $clients->avatar) }}" alt="" class="rounded-circle user_img_msg">
                 @else
                     <img src="{{ asset('assets/img/client1.png') }}" alt="" class="rounded-circle user_img_msg">
                 @endif
             </div>
             <div class="msg_cotainer">
                 {!!  $message->message  !!}
-                <span class="msg_time">8:40 AM, Today</span>
+                <span style="width: 100px;" class="msg_time">{{ \Carbon\Carbon::parse($message->created_at ?? '')->diffForHumans() }}</span>
             </div>
         </div>
     @endif

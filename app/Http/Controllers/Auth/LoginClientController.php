@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Client;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -41,9 +42,7 @@ class LoginClientController extends Controller
 
     public function login(Request $request){
         $this->validateLogin($request);
-        // If the class is using the ThrottlesLogins trait, we can automatically throttle
-        // the login attempts for this application. We'll key this by the username and
-        // the IP address of the client making these requests into this application.
+
         if (method_exists($this, 'hasTooManyLoginAttempts') &&
             $this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
@@ -54,7 +53,6 @@ class LoginClientController extends Controller
         if ($this->attemptLogin($request)) {
             $user = auth('clients')->user();
             if (empty($user->email_verified_at)){
-//                dd($user->email);
                 $user->sendEmailVerificationNotification();
                 session()->put('_verify_email',$user->email);
                 $this->guard()->logout();
@@ -98,9 +96,18 @@ class LoginClientController extends Controller
         return Auth::guard('clients');
     }
 
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|exists:clients,email,status,1',
+            'password' => 'required',
+        ]);
+    }
+
 
     public function redirectPath()
     {
         return '/client/home';
     }
+
 }

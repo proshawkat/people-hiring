@@ -104,11 +104,10 @@
             <div class="modal-body">
                 <div class="subsciber_modal_message">
                     <div class="sucimg">
-                        <img width="48" src="{{ asset('assets/img/in_icon.png') }}">
+                        <img width="48" src="{{ asset('front_assets/images/favicon.png') }}">
                     </div>
                     <div class="sub_msg">
                         <h3>{!! session('message') !!}</h3>
-                        <p>We will send you text message promotions & Updates</p>
                     </div>
                 </div>
             </div>

@@ -71,12 +71,18 @@ class AuthClientController extends Controller
         try{
             $client = $this->create($request->all());
             event(new Registered($client));
+
+            $this->guard()->login($client);
+
             return $this->registered($request, $client)
                 ?: redirect($this->redirectPath())
-                    ->with("Registration successful! A verification mail has send to your email address. Please verify your email, then try to sign in.");
+                    ->with([
+                        'status'    => 'success',
+                        'message'   => "Registration successful! A verification mail has send to your email address. Please verify your email, then try to sign in."
+                    ]);
         }catch (\Exception $exception){
 
-            return redirect()->back()->withAlert([
+            return redirect()->back()->with([
                 'status'    => false,
                 'message'   => 'Please, Try again!'
             ]);
@@ -129,7 +135,7 @@ class AuthClientController extends Controller
             'email'     => $data['email'],
             'password'  => Hash::make($data['password']),
             'phone'     => $data['phone'],
-            'status'   => 0
+            'status'   => 1
         ]);
     }
 

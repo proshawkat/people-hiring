@@ -293,6 +293,7 @@
                     '_token': '{{ csrf_token() }}'
                 },
                 success: function (data) {
+                    $('#message').val('');
                     if (data == 'success') {
                         $.ajax({
                             url: '{{ url('/client/message/get') }}',

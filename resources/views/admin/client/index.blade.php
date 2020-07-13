@@ -45,7 +45,15 @@
                                 <td>{{ $value->phone }}</td>
                                 <td>{{ $value->gender }}</td>
                                 <td>
-                                    <a class="btn btn-success" href="{{ route('admin.client.message',$value->id ) }}">Message Reply</a>
+                                    @if($value->status == 1)
+                                        <span class="badge badge-success">Active user</span>
+                                    @elseif($value->status == 2)
+                                        <span class="badge badge-danger">Block user</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    <a class="btn btn-success" href="{{ route('admin.client.message',$value->id ) }}">Message</a>
+                                    <a class="btn {{ $value->status == 1 ? 'btn-danger' : 'btn-info' }}" href="{{ route('admin.client.block',$value->id ) }}">{{ $value->status == 1 ? 'Block' : 'Unblock' }}</a>
                                 </td>
                             </tr>
                         @endforeach
