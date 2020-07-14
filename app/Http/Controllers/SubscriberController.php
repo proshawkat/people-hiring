@@ -16,6 +16,10 @@ class SubscriberController extends Controller
 
     public function store(Request $request){
 
+        $this->validate($request, [
+            'email' => 'required',
+        ]);
+
         $subscri = Subscriber::get();
         $email = $request->email;
         $subscri = new Subscriber();
