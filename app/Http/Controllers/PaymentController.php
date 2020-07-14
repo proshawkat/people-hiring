@@ -13,6 +13,7 @@ use Micovi\LaravelSendy\LaravelSendy;
 class PaymentController extends Controller
 {
     public function action(Request $request){
+//        dd(Auth::guard('clients')->user()->id);
         if ($request->isMethod('post')){
             if($request->terms_check == 'on'){
 
@@ -26,6 +27,7 @@ class PaymentController extends Controller
 
                 $order = new Order();
                 $order->ser_id = $request->ser_id;
+                $order->client_id =  Auth::guard('clients')->user()->id;
                 $order->first_name = $request->first_name;
                 $order->last_name = $request->last_name;
                 $order->email = $request->email;

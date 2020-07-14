@@ -48,6 +48,11 @@
                     $('#update_status').text('0')
                 }
             })
-        };
+        }
+        // $( document ).ready(function() {
+            setInterval(function () {
+                $("#update_status").reload;
+            }, 2000);
+        // });
     </script>
 @endsection

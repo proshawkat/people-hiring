@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="x-apple-disable-message-reformatting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>IT Solutions</title>
+    <title>A-1 IT Solutions</title>
     <style type="text/css">
         a { text-decoration: none; outline: none; }
         @media (max-width: 649px) {
@@ -142,7 +142,7 @@
         <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation">
             <tbody>
             <tr>
-                <td class="o_hide" align="center" style="display: none;font-size: 0;max-height: 0;width: 0;line-height: 0;overflow: hidden;mso-hide: all;visibility: hidden;">Email Summary (Hidden)</td>
+                <td class="o_hide" align="center" style="display: none;font-size: 0;max-height: 0;width: 0;line-height: 0;overflow: hidden;mso-hide: all;visibility: hidden;">Email Summary</td>
             </tr>
             </tbody>
         </table>
@@ -152,7 +152,7 @@
             <tr>
                 <td class="o_bg-primary o_px-md o_py-md o_sans o_text" align="center" style="font-family: Helvetica, Arial, sans-serif;margin-top: 0px;margin-bottom: 0px;font-size: 16px;line-height: 24px;background-color: #212529;padding-left: 24px;padding-right: 24px;padding-top: 24px;padding-bottom: 24px;">
                     <p style="margin-top: 0px;margin-bottom: 0px;"><a class="o_text-white" href="#" style="text-decoration: none;outline: none;color: #ffffff;">
-                            <img src="https://shawkatali.com/images/logo.png" width="136" height="36" alt="Hire" style="max-width: 136px;-ms-interpolation-mode: bicubic;vertical-align: middle;border: 0;line-height: 100%;height: auto;outline: none;text-decoration: none;"></a>
+                            <img src="https://shawkatali.com/img/logo.png" width="136" height="36" alt="Hire" style="max-width: 136px;-ms-interpolation-mode: bicubic;vertical-align: middle;border: 0;line-height: 100%;height: auto;outline: none;text-decoration: none;"></a>
                     </p>
                 </td>
             </tr>

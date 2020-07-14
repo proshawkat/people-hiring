@@ -20,11 +20,18 @@ class OurServicesController extends Controller
     }
 
     public function insert(Request $request){
-        $services = OurServices::get();
+//        dd($request->all());
+        $this->validate($request, [
+                'title' => 'required',
+                'price' => 'required',
+                'image' => 'required',
+            ]);
 
         $service = new OurServices();
         $service->title = $request->title;
         $service->price = $request->price;
+        $service->short_details = $request->short_details;
+        $service->details = $request->details;
 
         $extension = $request->file('image')->getClientOriginalExtension();
 
@@ -45,10 +52,18 @@ class OurServicesController extends Controller
 
     public function update(Request $request){
 
+        $this->validate($request, [
+            'title' => 'required',
+            'price' => 'required',
+            'image' => 'required',
+        ]);
+
         $service = OurServices::find($request->id);
 
         $service->title = $request->title;
         $service->price = $request->price;
+        $service->short_details = $request->short_details;
+        $service->details = $request->details;
 
         if($request->file('image') != NULL){
             $extension = $request->file('image')->getClientOriginalExtension();

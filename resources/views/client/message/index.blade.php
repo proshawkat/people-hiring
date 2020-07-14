@@ -306,7 +306,6 @@
                                 $('.chat_area--conversation').html(data)
                             },
                             error: function (data) {
-                                alert("Something went wrong");
                                 console.log(data.responseText);
                             }
                         });

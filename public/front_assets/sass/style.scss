@@ -1240,7 +1240,7 @@ button {
 	height: auto;
 }
 
-// ### ##### INNER PAGES 
+// ### ##### INNER PAGES
 
 // ---- price
 
@@ -1266,6 +1266,7 @@ button {
     background: #fff;
     padding: 66px 55px 45px 55px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 
@@ -1443,7 +1444,7 @@ button {
     margin-top: 50px;
 }
 
-// ---- ACTIVE CLIEND 
+// ---- ACTIVE CLIEND
 
 .active_cliend_area {
     @extend %defult_div;
@@ -1571,7 +1572,7 @@ button {
     padding-top: 13px;
 }
 
-// --- our_work_area 
+// --- our_work_area
 
 .our_work_area {
     @extend %defult_div;
@@ -2417,7 +2418,7 @@ button {
         width: 100% !important;
     }
     .recruit_img {
-	   position: inherit !important;  
+	   position: inherit !important;
 	}
     .get-in-touch {
         width: 95% !important;
@@ -2451,7 +2452,7 @@ button {
 
     .active_cliend_box img {
     	width: 50% !important;
-    	margin-left: 0px; 
+    	margin-left: 0px;
     	margin: auto;
     	margin-bottom: 32px;
     }
@@ -2576,7 +2577,7 @@ button {
 }
 
 @media only screen and (max-width: 360px) {
-    
+
     .active_cliend_area .active_cliend_box img {
         margin-left: 5px !important;
     }
@@ -2586,7 +2587,7 @@ button {
     .header_cntn img {
         width: 60% !important;
     }
-    
+
 }
 
 @media only screen and (max-width: 320px) {

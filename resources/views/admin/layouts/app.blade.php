@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('back_assets/styles/extras.1.3.1.min.css') }}">
     <link href="{{ asset('back_assets/fileinput/css/fileinput.css') }}" media="all" rel="stylesheet" type="text/css"/>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link rel="stylesheet" href="toolbarconfigurator/lib/codemirror/neo.css">
   </head>
   <body class="h-100">
     <div class="container-fluid">

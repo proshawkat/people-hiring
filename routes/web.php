@@ -93,10 +93,13 @@ Route::group(['middleware'  => 'auth:clients'],function(){
     Route::post('/client/message/send/status', 'Client\MessageController@statusUpdate')->name('client.message.send.status')->middleware('verified');;
 
     //    Orders
-    Route::get('/client/services', 'Client\OrderController@index')->name('client.services')->middleware('verified');;
+    Route::get('/client/services', 'Client\OrderController@index')->name('client.services')->middleware('verified');
 
     //    settings
-    Route::get('/client/settings', 'Client\SettingsController@index')->name('client.settings')->middleware('verified');;
-    Route::post('/client/profile/update', 'Client\SettingsController@update')->name('client.profile.update')->middleware('verified');;
+    Route::get('/client/settings', 'Client\SettingsController@index')->name('client.settings')->middleware('verified');
+    Route::post('/client/profile/update', 'Client\SettingsController@update')->name('client.profile.update')->middleware('verified');
+
+    Route::post('/client/rating/insert', 'RatingController@insert')->name('client.rating.insert');
+
 });
 

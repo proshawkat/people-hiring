@@ -24,6 +24,16 @@
                                     <h1>{{ $servcie->price }}</h1>
                                     <p class="bussines_plan_month_text">/month</p>
                                 </div>
+                                @php
+                                    $ratingAvg = \App\ServiceRating::where('service_id', $servcie->id)->avg('value')
+                                @endphp
+                                @if($ratingAvg > 0)
+                                    <div class="text-center">
+                                        @for ($i = 0; $i < 5; ++$i)
+                                            <i style="color: #ea0;" class="fa fa-star{{ $ratingAvg <= $i ? '-o':'' }}" aria-hidden="true"></i>
+                                        @endfor
+                                    </div>
+                                @endif
                                 <div class="bussines_plan_text">
                                     <p>- 1 dedicated Mid-Level designer/developer</p>
                                     <p>- 8 Hours Day 5 Days week</p>
@@ -297,19 +307,19 @@
                                         <div class="row">
 
                                             <div class="form-group col-md-6">
-                                                <input required="required" type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name">
+                                                <input required="required" value="{{ Auth::guard('clients')->user() ? Auth::guard('clients')->user()->name : '' }}" type="text" class="form-control" name="first_name" id="first_name" placeholder="First Name">
                                             </div>
 
                                             <div class="form-group col-md-6">
-                                                <input required="required" type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name">
+                                                <input required="required" value="{{ Auth::guard('clients')->user() ? Auth::guard('clients')->user()->name : '' }}" type="text" class="form-control" name="last_name" id="last_name" placeholder="Last Name">
                                             </div>
 
                                             <div class="form-group col-md-6">
-                                                <input required="required" type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                                <input required="required" type="email" value="{{ Auth::guard('clients')->user() ? Auth::guard('clients')->user()->email : '' }}" class="form-control" name="email" id="email" placeholder="Email">
                                             </div>
 
                                             <div class="form-group col-md-6">
-                                                <input required="required" type="text" class="form-control" name="phone" placeholder="Phone">
+                                                <input required="required" type="text" class="form-control" value="{{ Auth::guard('clients')->user() ? Auth::guard('clients')->user()->phone : '' }}" name="phone" placeholder="Phone">
                                             </div>
 
                                         </div>

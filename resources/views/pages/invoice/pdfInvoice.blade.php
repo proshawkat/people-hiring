@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="x-apple-disable-message-reformatting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hiring Now</title>
+    <title>A-1 IT Solutions</title>
     <style type="text/css">
       a { text-decoration: none; outline: none; }
       @media (max-width: 449px) {
@@ -73,7 +73,7 @@
     <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation">
       <tbody>
         <tr>
-          <td class="o_hide" align="center" style="display: none;font-size: 0;max-height: 0;width: 0;line-height: 0;overflow: hidden;mso-hide: all;visibility: hidden;">Email Summary (Hidden)</td>
+          <td class="o_hide" align="center" style="display: none;font-size: 0;max-height: 0;width: 0;line-height: 0;overflow: hidden;mso-hide: all;visibility: hidden;">Invoice</td>
         </tr>
       </tbody>
     </table>
@@ -87,7 +87,7 @@
               <tbody>
                 <tr>
                   <td class="o_bg-primary o_px o_py-md o_br-t o_sans o_text" align="center" style="font-family: Helvetica, Arial, sans-serif;margin-top: 0px;margin-bottom: 0px;font-size: 16px;line-height: 24px;background-color: #212529;border-radius: 4px 4px 0px 0px;padding-left: 16px;padding-right: 16px;padding-top: 24px;padding-bottom: 24px;">
-                    <p style="margin-top: 0px;margin-bottom: 0px;"><a class="o_text-white" href="#" style="text-decoration: none;outline: none;color: #ffffff;"><img src="https://shawkatali.com/images/logo.png" width="136" height="36" alt="Designbole" style="max-width: 136px;-ms-interpolation-mode: bicubic;vertical-align: middle;border: 0;line-height: 100%;height: auto;outline: none;text-decoration: none;"></a></p>
+                    <p style="margin-top: 0px;margin-bottom: 0px;"><a class="o_text-white" href="#" style="text-decoration: none;outline: none;color: #ffffff;"><img src="https://shawkatali.com/img/logo.png" width="136" height="36" alt="Designbole" style="max-width: 136px;-ms-interpolation-mode: bicubic;vertical-align: middle;border: 0;line-height: 100%;height: auto;outline: none;text-decoration: none;"></a></p>
                   </td>
                 </tr>
               </tbody>
@@ -181,7 +181,7 @@
                     <div class="o_col o_col-2 o_col-full" style="display: inline-block;vertical-align: top;width: 100%;max-width: 200px;">
                       <div style="font-size: 24px; line-height: 24px; height: 24px;">&nbsp; </div>
                       <div class="o_px-xs o_sans o_text-xs o_text-secondary o_left o_xs-center" style="font-family: Helvetica, Arial, sans-serif;margin-top: 0px;margin-bottom: 0px;font-size: 14px;line-height: 21px;color: #424651;text-align: left;padding-left: 8px;padding-right: 8px;">
-                        
+
                       </div>
                     </div>
                     <!--[if mso]></td></tr></table><![endif]-->
@@ -218,7 +218,7 @@
                       </div>
                     </div>
                     <!--[if mso]></td></tr><tr><td colspan="2" style="padding: 0px 8px;"><![endif]-->
-                    
+
                     <!--[if mso]></td></tr></table><![endif]-->
                   </td>
                 </tr>

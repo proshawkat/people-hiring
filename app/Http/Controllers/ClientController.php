@@ -18,6 +18,7 @@ class ClientController extends Controller
 
     public function messageIndex($id){
         $clients = Client::find($id);
+        ConversationReply::where('from', $id)->update(['status'=> 1]);
 
         if (!Conversation::where('from', Auth::id())
                 ->where('to', $id)

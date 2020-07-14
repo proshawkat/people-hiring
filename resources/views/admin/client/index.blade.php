@@ -52,7 +52,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a class="btn btn-success" href="{{ route('admin.client.message',$value->id ) }}">Message</a>
+                                    <a class="btn btn-success" href="{{ route('admin.client.message',$value->id ) }}">Message <span id="update_status" class="badge badge-secondary">{{ \App\ConversationReply::where('from', $value->id)->where('status', 0)->count() }}</span></a>
                                     <a class="btn {{ $value->status == 1 ? 'btn-danger' : 'btn-info' }}" href="{{ route('admin.client.block',$value->id ) }}">{{ $value->status == 1 ? 'Block' : 'Unblock' }}</a>
                                 </td>
                             </tr>
