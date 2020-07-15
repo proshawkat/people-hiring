@@ -259,7 +259,8 @@
 <div class="modal fade single-price-page" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-            <form role="form" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" id="payment-form" action="{{ url('/payment/action') }}" method="post">
+{{--            <form role="form" class="require-validation" data-cc-on-file="false" data-stripe-publishable-key="{{ env('STRIPE_KEY') }}" id="payment-form" action="{{ url('/payment/action') }}" method="post">--}}
+            <form role="form" action="{{ url('/payment/action') }}" method="post">
             @csrf
             <input name="ser_price" id="ser_price" type="hidden" value="" />
             <input name="ser_id" id="ser_id" type="hidden" value="" />
@@ -398,7 +399,7 @@
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script src="https://js.stripe.com/v3/"></script>
 
 <script type="text/javascript">
     $('#terms_check').click(function() {

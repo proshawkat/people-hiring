@@ -17,13 +17,13 @@ class PaymentController extends Controller
         if ($request->isMethod('post')){
             if($request->terms_check == 'on'){
 
-                Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-                Stripe\Charge::create ([
-                    "amount" => $request->ser_price * 100,
-                    "currency" => "usd",
-                    "source" => $request->stripeToken,
-                    "description" => "Service payment from peoplehire.com."
-                ]);
+//                Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+//                Stripe\Charge::create ([
+//                    "amount" => $request->ser_price * 100,
+//                    "currency" => "usd",
+//                    "source" => $request->stripeToken,
+//                    "description" => "Service payment from peoplehire.com."
+//                ]);
 
                 $order = new Order();
                 $order->ser_id = $request->ser_id;

@@ -51,7 +51,7 @@
                 <div class="about_box">
                     <img src="{{ asset('front_assets/images/inner_images/team-01.png') }}" alt="our team">
                     <h4>Md Shawkat Ali</h4>
-                    <h6>Team Leader</h6>
+                    <h6>Team Leader(Web Developer)</h6>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -65,14 +65,14 @@
                 <div class="about_box">
                     <img src="{{ asset('front_assets/images/inner_images/team-03.png') }}" alt="our team">
                     <h4>ABIDUR RAHMAN (LEMON)</h4>
-                    <h6>Developer</h6>
+                    <h6>Graphics Designer</h6>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
                 <div class="about_box">
                     <img src="{{ asset('front_assets/images/inner_images/team-02.png') }}" alt="our team">
                     <h4>ABDULLAH AL MAHMUD</h4>
-                    <h6>Developer</h6>
+                    <h6>Web Developer</h6>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -86,7 +86,7 @@
                 <div class="about_box">
                     <img src="{{ asset('front_assets/images/inner_images/team-06.png') }}" alt="our team">
                     <h4>MD ABU RAYHAN</h4>
-                    <h6>Hardware and Networking expert</h6>
+                    <h6>Hardware & Networking Expert</h6>
                 </div>
             </div>
         </div>
