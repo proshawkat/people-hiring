@@ -45,7 +45,7 @@ class PaymentController extends Controller
                 Mail::send('pages.invoice.invoiceMail', ['order' => $order, 'orderItems' => 'dd', 'id' => $orderId], function ($message) use ($request,$pdf,$order) {
 
                     $pdf = PDF::loadView('pages.invoice.pdfInvoice', compact('order'));
-                    $message->from('shawkatali527@gmail.com', 'Peoplehire '.$request->ser_title);
+                    $message->from('shawkatali527@gmail.com', 'A 1 IT Solutions '.$request->ser_title);
                     $message->to($request->email, $request->first_name . ' ' . $request->last_name);
                     $message->bcc('showkatalimon@gmail.com');
                     $message->subject('Invoice');
